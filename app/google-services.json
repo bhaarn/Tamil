@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "594642547675",
+    "firebase_url": "https://tamil-58af7.firebaseio.com",
+    "project_id": "tamil-58af7",
+    "storage_bucket": "tamil-58af7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594642547675:android:296076fc393b60a6",
+        "android_client_info": {
+          "package_name": "com.padhuga.tamil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594642547675-5623dvv2isubih4mf35k6sp3k6lii9au.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJAUGy9Ptj6ch-E_XgpBFIBS7T6TAVbLI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

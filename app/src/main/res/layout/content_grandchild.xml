@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.padhuga.tamil.activities.MainActivity">
+
+    <com.padhuga.tamil.utils.BaseChildCardView
+        style="@style/ChildCardViewStyle"
+        android:layout_height="wrap_content">
+
+        <LinearLayout style="@style/LinearLayoutStyle">
+
+            <com.padhuga.tamil.utils.BaseTextView
+                android:id="@+id/grand_child_title"
+                style="@style/TextViewStyle" />
+
+            <com.padhuga.tamil.utils.BaseTextView
+                android:id="@+id/grand_child_soothiram"
+                style="@style/TextViewStyle"
+                android:visibility="gone" />
+
+            <com.padhuga.tamil.utils.BaseTextView
+                android:id="@+id/grand_child_content"
+                style="@style/TextViewStyle" />
+
+            <com.padhuga.tamil.utils.BaseTextView
+                android:id="@+id/grand_child_example"
+                style="@style/TextViewStyle" />
+
+        </LinearLayout>
+
+    </com.padhuga.tamil.utils.BaseChildCardView>
+
+</RelativeLayout>

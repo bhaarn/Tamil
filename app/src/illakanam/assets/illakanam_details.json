@@ -1,0 +1,256 @@
+{
+  "illakanam":
+  [
+    {
+      "title": "இலக்கணகுறிப்பு - தொகைகள்",
+      "array": [
+        {
+          "title": "பண்புத்தொகை",
+          "desc": "panbu",
+          "example": ""
+        },
+        {
+          "title": "இருபெயரொட்டு பண்புத்தொகை",
+          "desc": "iru",
+          "example": ""
+        },
+        {
+          "title": "வினைத்தொகை",
+          "desc": "vina",
+          "example": ""
+        },
+        {
+          "title": "உவமைத்தொகை",
+          "desc": "uva",
+          "example": ""
+        },
+        {
+          "title": "உருவகத்தொகை",
+          "desc": "uru",
+          "example": ""
+        },
+        {
+          "title": "உம்மைத்தொகை",
+          "desc": "ummai",
+          "example": ""
+        },
+        {
+          "title": "அன்மொழித்தொகை",
+          "desc": "an",
+          "example": ""
+        }
+      ]
+    }
+      ,
+    {
+      "title": "இலக்கணகுறிப்பு - எச்சங்கள்",
+      "array": [
+        {
+          "title": "பெயரெச்சம்",
+          "desc": "peyar",
+          "example": ""
+        },
+        {
+          "title": "ஈறுகெட்ட எதிர்மறை பெயரெச்சம்",
+          "desc": "eeru",
+          "example": ""
+        },
+        {
+          "title": "வினையெச்சம்",
+          "desc": "vina",
+          "example": ""
+        }
+      ]
+    }
+      ,
+    {
+      "title": "இலக்கணகுறிப்பு - அளபெடைகள்",
+      "array": [
+        {
+          "title": "இன்னிசை அளபெடை",
+          "desc": "innisai",
+          "example": ""
+        },
+        {
+          "title": "இசைநிறை அளபெடை",
+          "desc": "isai",
+          "example": ""
+        },
+        {
+          "title": "சொல்லிசை அளபெடை",
+          "desc": "sol",
+          "example": ""
+        }
+      ]
+    }
+      ,
+    {
+        "title": "இலக்கணகுறிப்பு - மற்றவைகள்",
+        "array": [
+          {
+            "title": "வினையால் அணையும் பெயர்",
+            "desc": "vina",
+            "example": ""
+          },
+          {
+            "title": "உரிச்சொல்",
+            "desc": "uri",
+            "example": ""
+          },
+          {
+            "title": "உரிச்சொற்றொடர்",
+            "desc": "urit",
+            "example": ""
+          },
+          {
+            "title": "விளி",
+            "desc": "vili",
+            "example": ""
+          }
+        ]
+      }
+    ,
+    {
+      "title": "பகுபத உறுப்பிலக்கணம்",
+      "array": [
+        {
+          "title": "பகுதி",
+          "desc": "pagu",
+          "example": ""
+        },
+        {
+          "title": "சந்தி",
+          "desc": "san",
+          "example": ""
+        },
+        {
+          "title": "விகாரம்",
+          "desc": "vig",
+          "example": ""
+        },
+        {
+          "title": "இடைநிலை",
+          "desc": "ida",
+          "example": ""
+        },
+        {
+          "title": "சாரியை",
+          "desc": "sar",
+          "example": ""
+        },
+        {
+          "title": "விகுதி",
+          "desc": "vig",
+          "example": ""
+        }
+      ]
+    }
+      ,
+    {
+        "title": "பகாப்பதம்",
+        "array": [
+          {
+            "title": "பகாப்பதம்",
+            "desc": "paga",
+            "example": ""
+          }
+        ]
+      }
+    ,
+    {
+      "title": "புணர்ச்சி விதி",
+      "array": [
+        {
+          "title": "இயல்பு புணர்ச்சி",
+          "desc": "iyal",
+          "example": ""
+        },
+        {
+          "title": "திரிபு புணர்ச்சி (விகாரப்புணர்ச்சி)",
+          "desc": "thiri",
+          "example": ""
+        },
+        {
+          "title": "ஈறு போதல்",
+          "desc": "iiru",
+          "example": ""
+        },
+        {
+          "title": "இடை உகரம் இய்யாதல்",
+          "desc": "idai",
+          "example": ""
+        },
+        {
+          "title": "ஆதி நீடல்",
+          "desc": "aadi",
+          "example": ""
+        },
+        {
+          "title": "அடியகரம் ஐ ஆதல்",
+          "desc": "adi",
+          "example": ""
+        },
+        {
+          "title": "தன்னொற்று இரட்டல்",
+          "desc": "than",
+          "example": ""
+        },
+        {
+          "title": "முன்னின்ற மெய் திரிதல்",
+          "desc": "mun",
+          "example": ""
+        },
+        {
+          "title": "இனம் மிகல்",
+          "desc": "inam",
+          "example": ""
+        },
+        {
+          "title": "இணையவும்",
+          "desc": "inai",
+          "example": ""
+        },
+        {
+          "title": "உடல் உயிர் புணர்ச்சி",
+          "desc": "udal",
+          "example": ""
+        },
+        {
+          "title": "பல சில புணர்ச்சி",
+          "desc": "pala",
+          "example": ""
+        },
+        {
+          "title": "திசைப்பெயர் புணர்ச்சி",
+          "desc": "thisai",
+          "example": ""
+        },
+        {
+          "title": "பூபெயர்ப் புணர்ச்சி",
+          "desc": "poo",
+          "example": ""
+        },
+        {
+          "title": "தேன்மொழி புணர்ச்சி",
+          "desc": "then",
+          "example": ""
+        },
+        {
+          "title": "உடம்படுமெய் புணர்ச்சி",
+          "desc": "udam",
+          "example": ""
+        },
+        {
+          "title": "தனிக்குறில் புணர்ச்சி",
+          "desc": "thani",
+          "example": ""
+        },
+        {
+          "title": "தேங்காய் புணர்ச்சி",
+          "desc": "thengai",
+          "example": ""
+        }
+      ]
+    }
+  ]
+}

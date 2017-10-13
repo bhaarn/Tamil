@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">இலக்கணம்</string>
+    <string name="ad_id">ca-app-pub-2373003321681741~7281773351</string>
+    <string name="json_file_name">data.json</string>
+    <string name="json_open_file_format">UTF-8</string>
+    <string name="action_app_search">Search</string>
+    <string name="action_app_rate">Rate the App</string>
+    <string name="action_font_size">Change Font Size</string>
+    <string name="action_theme_style">Change Theme Style</string>
+    <string name="action_feature_help">Help</string>
+    <string name="help_text">help</string>
+    <string name="action_app_share">Share the App</string>
+    <string name="action_more_apps">Find More Apps From Developer</string>
+    <string name="action_about">About Us</string>
+    <string name="play_more_apps">https://play.google.com/store/search?q=padhugadhasan+application</string>
+    <string name="old_play_store">market://details?id=</string>
+    <string name="new_play_store">http://play.google.com/store/apps/details?id=</string>
+    <string name="share_message">Please check this application.  This app is very good in Tamil grammar.  You can find the app in play store with the url http://play.google.com/store/apps/details?id=</string>
+    <string name="about_text">about</string>
+    <string name="font_size_max">38</string>
+    <string name="tamil_keyboard_check">You will be able to search only if you have Tamil Keyboard.</string>
+    <string name="font_size_setter">Set Font Size</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="search_hint">Tamil Text</string>
+    <string name="filter_title_view_tamil">tamil</string>
+</resources>

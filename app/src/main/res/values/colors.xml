@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorListViewHeaderBackground">#000000</color>
+    <color name="colorListViewHeaderText">#f9f93d</color>
+
+    <color name="colorBackground">#eaaf02</color>
+    <color name="colorBottomBackground">#729101</color>
+
+    <color name="primaryColor_black">#df9502</color>
+    <color name="primaryColorDark_black">#000000</color>
+    <color name="primaryColorText_black">#000000</color>
+    <color name="windowBackgroundColor_black">#888888</color>
+    <color name="navigationBarColor_black">#000000</color>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">இலக்கியம்</string>
+    <string name="json_file_name">illakiyam.json</string>
+    <string name="share_message">Please check this application.  This app is very good in Tamil books.  You can find the app in play store with the url http://play.google.com/store/apps/details?id=</string>
+</resources>

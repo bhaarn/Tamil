@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+	<PreferenceCategory
+		android:title="Color">
+		<com.flask.colorpicker.ColorPickerPreference
+			android:key="text_color_preference"
+			android:title="Text Color"
+			app:alphaSlider="true"
+			app:density="30"
+			app:initialColor="0xfff9f93d"
+			app:lightnessSlider="true"
+			/>
+		<com.flask.colorpicker.ColorPickerPreference
+			android:key="parent_card_color_preference"
+			android:title="First Screen Color"
+			app:alphaSlider="true"
+			app:density="30"
+			app:initialColor="0xff729101"
+			app:lightnessSlider="true"
+			/>
+		<com.flask.colorpicker.ColorPickerPreference
+			android:key="child_card_color_preference"
+			android:title="Second Screen Color"
+			app:alphaSlider="true"
+			app:density="30"
+			app:initialColor="0xffdf9502"
+			app:lightnessSlider="true"
+			/>
+
+	</PreferenceCategory>
+</PreferenceScreen>

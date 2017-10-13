@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.padhuga.tamil.activities.MainActivity"
+    android:layout_marginTop="@dimen/parent_layout_common_margin"
+    style="@style/ParentLinearLayoutStyle">
+
+    <com.padhuga.tamil.utils.BaseChildCardView
+        style="@style/ChildCardViewStyle"
+        android:layout_height="wrap_content">
+
+    <ListView
+        android:id="@+id/search_results_list"
+       style="@style/ListViewStyle" />
+
+    </com.padhuga.tamil.utils.BaseChildCardView>
+
+</LinearLayout>

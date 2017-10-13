@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="listViewHeaderPadding">8dp</dimen>
+    <dimen name="listViewItemPadding">5dp</dimen>
+    <dimen name="commonPadding">10dp</dimen>
+    <dimen name="cardviewProperty">20dp</dimen>
+    <dimen name="parent_layout_common_margin">0dp</dimen>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/dev_13444/Documents/GitHub/Tamil/app/build/intermediates/incremental-classes/illakiyam/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bb436ea4f47768ba6f8399e60932aa0282982efb">
+        <dex dex="/Users/dev_13444/Documents/GitHub/Tamil/app/build/intermediates/transforms/dex/illakiyam/debug/folders/1000/10000/instant-run-bootstrap_a5c4b0f32f8e916f92ac006050c36ec05ad9e5b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dev_13444/Documents/GitHub/Tamil/app/build/intermediates/incremental-runtime-classes/illakiyam/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/dev_13444/Documents/GitHub/Tamil/app/build/intermediates/transforms/dex/illakiyam/debug/folders/1000/10000/instant-run_f71cfdfe2fcc7d9938729b3407453bafbd1d70bf/classes.dex" />
+    </item>
+
+</items>

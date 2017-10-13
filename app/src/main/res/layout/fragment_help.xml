@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.padhuga.tamil.activities.MainActivity"
+    android:layout_marginTop="@dimen/parent_layout_common_margin"
+    style="@style/ParentLinearLayoutStyle">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        style="@style/ScrollViewStyle">
+
+        <com.padhuga.tamil.utils.BaseChildCardView
+            style="@style/ChildCardViewStyle"
+            android:layout_height="wrap_content">
+
+        <com.padhuga.tamil.utils.BaseTextView
+            android:id="@+id/help_text"
+            style="@style/TextViewStyle" />
+
+        </com.padhuga.tamil.utils.BaseChildCardView>
+
+    </ScrollView>
+
+</LinearLayout>

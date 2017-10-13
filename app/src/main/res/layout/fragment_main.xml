@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/parent_layout_common_margin"
+    tools:context="com.padhuga.tamil.activities.MainActivity">
+
+    <com.padhuga.tamil.utils.BaseParentCardView
+        style="@style/ParentCardViewStyle">
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.padhuga.tamil.utils.BaseParentCardView>
+
+    <com.padhuga.tamil.utils.BaseTextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

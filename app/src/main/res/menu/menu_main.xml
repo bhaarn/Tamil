@@ -1,0 +1,56 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="dev.app.com.gsonparsing.MainActivity">
+    <item
+        android:id="@+id/action_app_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="100"
+        android:title="@string/action_app_search"
+        app:showAsAction="collapseActionView|ifRoom"
+        android:actionViewClass="android.support.v7.widget.SearchView"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+    <item
+        android:id="@+id/action_app_rate"
+        android:icon="@android:drawable/btn_star"
+        android:orderInCategory="101"
+        android:title="@string/action_app_rate"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_font_size"
+        android:icon="@android:drawable/ic_menu_sort_alphabetically"
+        android:orderInCategory="102"
+        android:title="@string/action_font_size"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_theme_style"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:orderInCategory="103"
+        android:title="@string/action_theme_style"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_feature_help"
+        android:icon="@android:drawable/ic_menu_help"
+        android:orderInCategory="104"
+        android:title="@string/action_feature_help"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_app_share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:orderInCategory="105"
+        android:title="@string/action_app_share"
+        app:showAsAction="ifRoom|withText"
+        android:actionProviderClass="android.widget.ShareActionProvider"/>
+    <item
+        android:id="@+id/action_more_apps"
+        android:icon="@android:drawable/ic_menu_more"
+        android:orderInCategory="106"
+        android:title="@string/action_more_apps"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_about"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:orderInCategory="107"
+        android:title="@string/action_about"
+        app:showAsAction="ifRoom|withText" />
+</menu>
