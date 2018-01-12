@@ -14,20 +14,28 @@
         <activity android:name="com.padhuga.tamil.activities.BaseActivity" />
 
         <activity
-            android:name="com.padhuga.tamil.activities.MainActivity"
+            android:name=".activities.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.MainActivity"
             android:launchMode="singleTop">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name="com.padhuga.tamil.activities.DetailsActivity"
+            android:name=".activities.DetailsActivity"
             android:launchMode="singleTop">
             <meta-data
                 android:name="android.app.searchable"
@@ -37,9 +45,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.padhuga.tamil.activities.PrefsActivity" />
+        <activity android:name=".activities.PrefsActivity" />
 
-        <activity android:name="com.padhuga.tamil.activities.DeepLinkActivity">
+        <activity android:name=".activities.DeepLinkActivity">
             <intent-filter android:label="@string/filter_title_view_tamil">
                 <action android:name="android.intent.action.VIEW" />
 
