@@ -21,15 +21,14 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.padhuga.tamil.R;
+import com.padhuga.tamil.models.ParentModel;
+import com.padhuga.tamil.models.SearchRetriever;
+import com.padhuga.tamil.utils.Constants;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-
-import com.padhuga.tamil.models.ParentModel;
-import com.padhuga.tamil.models.SearchRetriever;
-import com.padhuga.tamil.R;
-import com.padhuga.tamil.utils.Constants;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -173,7 +172,7 @@ public class BaseActivity extends AppCompatActivity {
         SearchView searchView =
                 (SearchView) menu.findItem(R.id.action_app_search).getActionView();
         searchView.setSearchableInfo(
-                searchManager.getSearchableInfo(getComponentName()));
+                searchManager != null ? searchManager.getSearchableInfo(getComponentName()) : null);
     }
 
     private void handleIntent(Intent intent) {
@@ -194,7 +193,8 @@ public class BaseActivity extends AppCompatActivity {
         for (int position = 0; position < parentModel.getData().getType().size(); position++) {
             for (int groupPosition = 0; groupPosition < parentModel.getData().getType().get(position).getType().size(); groupPosition++) {
                 for (int childPosition = 0; childPosition < parentModel.getData().getType().get(position).getType().get(groupPosition).getType().size(); childPosition++) {
-                    if (parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getSoothiram().contains(query) ||
+                    if (parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getTitle().contains(query) ||
+                            parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getSoothiram().contains(query) ||
                             parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getDesc().contains(query) ||
                             parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getExample().contains(query)) {
                         searchRetriever.add(new SearchRetriever(parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getTitle(),
