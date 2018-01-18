@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,9 +15,11 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -29,6 +32,7 @@ import com.padhuga.tamil.utils.Constants;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -166,7 +170,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void performSearch(Menu menu) {
-        Toast.makeText(getApplicationContext(), R.string.tamil_keyboard_check, Toast.LENGTH_LONG).show();
+        openKeyboardPreference();
         SearchManager searchManager =
                 (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView =
@@ -279,5 +283,18 @@ public class BaseActivity extends AppCompatActivity {
     public String retrieveChildCardTheme() {
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         return "#" + Integer.toHexString(sharedPref.getInt("child_card_color_preference", ContextCompat.getColor(this, R.color.colorBackground)));
+    }
+
+    private void openKeyboardPreference() {
+        Toast.makeText(getApplicationContext(), R.string.tamil_keyboard_check, Toast.LENGTH_LONG).show();
+        InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
+        imeManager.showInputMethodPicker();
+        Resources res = getBaseContext().getResources();
+        // Change locale settings in the app.
+        DisplayMetrics dm = res.getDisplayMetrics();
+        android.content.res.Configuration conf = res.getConfiguration();
+        conf.locale = new Locale("ta_IN".toLowerCase());
+        res.updateConfiguration(conf, dm);
+        Log.i("inside onStart", "after ever");
     }
 }

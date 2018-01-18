@@ -22,6 +22,6 @@
     <string name="font_size_setter">Set Font Size</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="search_hint">Tamil Text</string>
+    <string name="search_hint">தமிழ் வார்த்தைகளை தேடு </string>
     <string name="filter_title_view_tamil">tamil</string>
 </resources>
