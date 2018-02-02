@@ -8,9 +8,8 @@ import android.util.Log;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-
-import com.padhuga.tamil.adapters.SectionPagerAdapter;
 import com.padhuga.tamil.R;
+import com.padhuga.tamil.adapters.SectionPagerAdapter;
 
 public class MainActivity extends BaseActivity {
 
@@ -37,7 +36,7 @@ public class MainActivity extends BaseActivity {
         AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("66E56BD85B959A0701EA3C5F7D32E19D")
+                .addTestDevice("2818610EB6FDBC046DB14EFB8EE05FEE")
                 .build();
         mAdView.loadAd(adRequest);
         Boolean b = adRequest.isTestDevice(this);

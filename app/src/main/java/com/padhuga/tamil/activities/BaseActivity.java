@@ -40,7 +40,8 @@ public class BaseActivity extends AppCompatActivity {
     private Menu menu;
     private SharedPreferences sharedPref;
     private int progRess;
-    public ParentModel parentModel;
+    ParentModel parentModel;
+    String listType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class BaseActivity extends AppCompatActivity {
         appName = getPackageName();
         sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         parentModel = readJSONFromAssetsAndConvertTogson();
+        listType = getResources().getString(R.string.list_view_type);
     }
 
     @Override
@@ -288,9 +290,10 @@ public class BaseActivity extends AppCompatActivity {
     private void openKeyboardPreference() {
         Toast.makeText(getApplicationContext(), R.string.tamil_keyboard_check, Toast.LENGTH_LONG).show();
         InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
-        imeManager.showInputMethodPicker();
+        if (imeManager != null) {
+            imeManager.showInputMethodPicker();
+        }
         Resources res = getBaseContext().getResources();
-        // Change locale settings in the app.
         DisplayMetrics dm = res.getDisplayMetrics();
         android.content.res.Configuration conf = res.getConfiguration();
         conf.locale = new Locale("ta_IN".toLowerCase());

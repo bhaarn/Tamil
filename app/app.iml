@@ -8,83 +8,83 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="illakanamDebug" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleIllakanamDebug" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileIllakanamDebugSources" />
+        <option name="SELECTED_BUILD_VARIANT" value="kalaigalDebug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleKalaigalDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileKalaigalDebugSources" />
         <afterSyncTasks>
-          <task>generateIllakanamDebugSources</task>
+          <task>generateKalaigalDebugSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res;file://$MODULE_DIR$/src/illakanam/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res;file://$MODULE_DIR$/src/kalaigal/res" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
-    <output url="file://$MODULE_DIR$/build/intermediates/classes/illakanam/debug" />
-    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/illakanam/debug" />
+    <output url="file://$MODULE_DIR$/build/intermediates/classes/kalaigal/debug" />
+    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/kalaigal/debug" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/illakanam/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/illakanam/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/illakanam/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/illakanam/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/illakanam/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/google-services/illakanam/debug" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/illakanam/debug" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/illakanam/debug" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanamDebug/res" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanamDebug/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanamDebug/assets" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanamDebug/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanamDebug/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanamDebug/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanamDebug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/illakanam/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/illakanam/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/illakanam/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/illakanam/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/illakanam/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/illakanam/debug" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/illakanam/debug" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanamDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanamDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanamDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanamDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanamDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanamDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanamDebug/shaders" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/test/illakanam/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanamDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanamDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanamDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanamDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanamDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanamDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanamDebug/shaders" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanam/res" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanam/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanam/assets" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanam/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanam/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanam/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/illakanam/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanam/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanam/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanam/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanam/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanam/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanam/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testIllakanam/shaders" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanam/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanam/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanam/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanam/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanam/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanam/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestIllakanam/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/kalaigal/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/kalaigal/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/kalaigal/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/kalaigal/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/kalaigal/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/google-services/kalaigal/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/kalaigal/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/kalaigal/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigalDebug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigalDebug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigalDebug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigalDebug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigalDebug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigalDebug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigalDebug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/kalaigal/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/kalaigal/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/kalaigal/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/kalaigal/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/kalaigal/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/kalaigal/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/kalaigal/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigalDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigalDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigalDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigalDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigalDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigalDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigalDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/test/kalaigal/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigalDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigalDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigalDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigalDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigalDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigalDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigalDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigal/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigal/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigal/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigal/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigal/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigal/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kalaigal/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigal/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigal/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigal/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigal/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigal/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigal/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testKalaigal/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigal/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigal/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigal/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigal/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigal/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigal/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestKalaigal/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -127,28 +127,23 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/build/.DS_Store" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/build-info" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-runtime-classes" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-verifier" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/restart-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />

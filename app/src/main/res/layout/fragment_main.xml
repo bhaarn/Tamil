@@ -6,7 +6,9 @@
     tools:context="com.padhuga.tamil.activities.MainActivity">
 
     <com.padhuga.tamil.utils.BaseParentCardView
-        style="@style/ParentCardViewStyle">
+        android:id="@+id/expandableListViewParent"
+        style="@style/ParentCardViewStyle"
+        android:visibility="gone">
 
         <ExpandableListView
             android:id="@+id/expandableListView"
@@ -19,5 +21,16 @@
         android:id="@+id/section_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <com.padhuga.tamil.utils.BaseParentCardView
+        android:id="@+id/listViewParent"
+        style="@style/ParentCardViewStyle"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@android:id/list"
+            style="@style/ListViewStyle" />
+
+    </com.padhuga.tamil.utils.BaseParentCardView>
 
 </RelativeLayout>

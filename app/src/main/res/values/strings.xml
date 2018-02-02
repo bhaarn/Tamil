@@ -2,6 +2,8 @@
     <string name="app_name">இலக்கணம்</string>
     <string name="ad_id">ca-app-pub-2373003321681741~7281773351</string>
     <string name="json_file_name">data.json</string>
+    <string name="list_type">list_type</string>
+    <string name="list_view_type">0</string>
     <string name="json_open_file_format">UTF-8</string>
     <string name="action_app_search">Search</string>
     <string name="action_app_rate">Rate the App</string>

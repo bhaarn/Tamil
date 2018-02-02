@@ -36,6 +36,10 @@ android {
             applicationId = "com.padhuga.tamil.nadagam"
             versionName = "1.0-nadagam"
         }
+        kalaigal {
+            applicationId = "com.padhuga.tamil.kalaigal"
+            versionName = "1.0-kalaigal"
+        }
     }
 }
 
