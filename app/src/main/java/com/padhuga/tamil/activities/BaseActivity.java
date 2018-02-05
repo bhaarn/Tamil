@@ -1,5 +1,6 @@
 package com.padhuga.tamil.activities;
 
+import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -23,6 +24,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.gson.Gson;
 import com.padhuga.tamil.R;
 import com.padhuga.tamil.models.ParentModel;
@@ -299,5 +303,17 @@ public class BaseActivity extends AppCompatActivity {
         conf.locale = new Locale("ta_IN".toLowerCase());
         res.updateConfiguration(conf, dm);
         Log.i("inside onStart", "after ever");
+    }
+
+    void initializeAds(Activity activity) {
+        MobileAds.initialize(this, getResources().getString(R.string.ad_id));
+        AdView mAdView = activity.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .addTestDevice("2818610EB6FDBC046DB14EFB8EE05FEE")
+                .build();
+        mAdView.loadAd(adRequest);
+        Boolean b = adRequest.isTestDevice(this);
+        Log.d("Bharani", b.toString());
     }
 }

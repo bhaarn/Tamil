@@ -35,30 +35,18 @@ public class DetailsFragment extends Fragment {
     private void setData(ViewGroup rootView) {
         int position = getArguments().getInt(Constants.ARG_SECTION_POSITION);
         int childPosition = getArguments().getInt(Constants.ARG_CHILD_POSITION);
-        Data parentModel = ((BaseActivity) getActivity()).parentModel.getData().getType().get(position);
         Data data = ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(childPosition);
 
-        BaseTextView parentTitle = rootView.findViewById(R.id.parent_title);
-        BaseTextView parentSoothiram = rootView.findViewById(R.id.parent_soothiram);
-        BaseTextView parentContent = rootView.findViewById(R.id.parent_content);
-        BaseTextView parentExample = rootView.findViewById(R.id.parent_example);
         BaseTextView childTitle = rootView.findViewById(R.id.child_title);
         BaseTextView childSoothiram = rootView.findViewById(R.id.child_soothiram);
         BaseTextView childContent = rootView.findViewById(R.id.child_content);
         BaseTextView childExample = rootView.findViewById(R.id.child_example);
 
-        parentTitle.setText(parentModel.getTitle());
-        parentSoothiram.setText(parentModel.getSoothiram());
-        parentContent.setText(parentModel.getDesc());
-        parentExample.setText(parentModel.getExample());
         childTitle.setText(data.getTitle());
         childSoothiram.setText(data.getSoothiram());
         childContent.setText(data.getDesc());
         childExample.setText(data.getExample());
 
-        if (!parentSoothiram.getText().equals("")) {
-            parentSoothiram.setVisibility(View.VISIBLE);
-        }
         if (!childSoothiram.getText().equals("")) {
             childSoothiram.setVisibility(View.VISIBLE);
         }
