@@ -10,6 +10,10 @@
         android:id="@+id/scrollView"
         style="@style/ScrollViewStyle">
 
+        <LinearLayout
+            android:id="@+id/overall_parent"
+            style="@style/ParentLinearLayoutStyle">
+
             <com.padhuga.tamil.utils.BaseChildCardView
                 style="@style/ChildCardViewStyle"
                 android:layout_height="wrap_content">
@@ -36,6 +40,8 @@
                 </LinearLayout>
 
             </com.padhuga.tamil.utils.BaseChildCardView>
+
+        </LinearLayout>
 
     </ScrollView>
 
