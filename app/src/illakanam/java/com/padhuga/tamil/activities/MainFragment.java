@@ -54,7 +54,7 @@ public class MainFragment extends Fragment {
             listDataChild.put(listDataHeader.get(i), st);
         }
 
-        ExpandableListView expandableListView = rootView.findViewById(R.id.expandableListView);
+        final ExpandableListView expandableListView = rootView.findViewById(R.id.expandableListView);
         ExpandableListAdapter listAdapter = new ExpandableListViewAdapter(getContext(), listDataHeader, listDataChild);
         expandableListView.setAdapter(listAdapter);
         CardView expandableListViewParent = rootView.findViewById(R.id.expandableListViewParent);
@@ -68,6 +68,16 @@ public class MainFragment extends Fragment {
                 return false;
             }
         });
+
+        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+                if (expandableListView.getExpandableListAdapter().getChildrenCount(groupPosition) == 0) {
+                    setupParentUI(groupPosition);
+                }
+                return false;
+            }
+        });
     }
 
     private void setupUI(int groupPosition, int childPosition) {
@@ -75,6 +85,13 @@ public class MainFragment extends Fragment {
         intent.putExtra(Constants.ARG_SECTION_POSITION, position);
         intent.putExtra(Constants.ARG_PARENT_POSITION, groupPosition);
         intent.putExtra(Constants.ARG_CHILD_POSITION, childPosition);
+        startActivity(intent);
+    }
+
+    private void setupParentUI(int groupPosition) {
+        Intent intent = new Intent(getActivity(), DetailsActivity.class);
+        intent.putExtra(Constants.ARG_SECTION_POSITION, position);
+        intent.putExtra(Constants.ARG_PARENT_POSITION, groupPosition);
         startActivity(intent);
     }
 }
