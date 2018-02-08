@@ -38,7 +38,6 @@ public class DetailsFragment extends Fragment {
         int position = getArguments().getInt(Constants.ARG_SECTION_POSITION);
         int groupPosition = getArguments().getInt(Constants.ARG_PARENT_POSITION);
         int childPosition = getArguments().getInt(Constants.ARG_CHILD_POSITION);
-        Data parentModel = ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(groupPosition);
         Data data = ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition);
         BaseTextView childTitle = rootView.findViewById(R.id.child_title);
         BaseTextView childSoothiram = rootView.findViewById(R.id.child_soothiram);
