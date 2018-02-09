@@ -1,0 +1,181 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_pane"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    tools:context=".activities.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/parent_panel1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@android:color/background_dark"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.padhuga.tamil.activities.LinearLayoutAbsListView
+            android:id="@+id/pane2"
+            android:tag="pane2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/heading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list_view2"
+                android:tag="listView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.padhuga.tamil.activities.LinearLayoutAbsListView>
+
+        <com.padhuga.tamil.activities.LinearLayoutAbsListView
+            android:id="@+id/pane3"
+            android:tag="pane3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/heading3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list_view3"
+                android:tag="listView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.padhuga.tamil.activities.LinearLayoutAbsListView>
+
+        <com.padhuga.tamil.activities.LinearLayoutAbsListView
+            android:id="@+id/pane4"
+            android:tag="pane4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/heading4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list_view4"
+                android:tag="listView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.padhuga.tamil.activities.LinearLayoutAbsListView>
+        
+        <com.padhuga.tamil.activities.LinearLayoutAbsListView
+            android:id="@+id/pane5"
+            android:tag="pane5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/heading5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list_view5"
+                android:tag="listView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.padhuga.tamil.activities.LinearLayoutAbsListView>
+
+        <com.padhuga.tamil.activities.LinearLayoutAbsListView
+            android:id="@+id/pane6"
+            android:tag="pane6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list_view6"
+                android:tag="listView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.padhuga.tamil.activities.LinearLayoutAbsListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/parent_panel2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/background_dark"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.padhuga.tamil.activities.LinearLayoutAbsListView
+            android:id="@+id/pane1"
+            android:tag="pane1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@android:color/background_light"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/heading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list_view1"
+                android:tag="listView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.padhuga.tamil.activities.LinearLayoutAbsListView>
+
+    </LinearLayout>
+
+</LinearLayout>

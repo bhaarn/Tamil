@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="icon">
+        <item>@drawable/a</item>
+        <item>@drawable/aa</item>
+        <item>@drawable/e</item>
+        <item>@drawable/ee</item>
+        <item>@drawable/oo</item>
+        <item>@drawable/ooo</item>
+        <item>@drawable/ae</item>
+        <item>@drawable/a</item>
+        <item>@drawable/i</item>
+        <item>@drawable/ou</item>
+        <item>@drawable/oou</item>
+        <item>@drawable/a_writing</item>
+    </array>
+    <array name="text">
+        <item>"அ"</item>
+        <item>"ஆ"</item>
+        <item>"இ"</item>
+        <item>"ஈ"</item>
+        <item>"உ"</item>
+        <item>"ஊ"</item>
+        <item>"எ"</item>
+        <item>"ஏ"</item>
+        <item>"ஐ"</item>
+        <item>"ஒ"</item>
+        <item>"ஓ"</item>
+        <item>"ஔ"</item>
+    </array>
+
+</resources>

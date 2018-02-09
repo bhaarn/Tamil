@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">இசை</string>
     <string name="json_file_name">isai.json</string>
-    <string name="list_view_type">0</string>
     <string name="share_message">Please check this application.  This app is very good in Tamil isai.  You can find the app in play store with the url http://play.google.com/store/apps/details?id=</string>
 </resources>

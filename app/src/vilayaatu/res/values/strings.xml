@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Games</string>
+    <string name="json_file_name">data.json</string>
+    <string name="share_message">Please check this application.  This app is very good in Tamil grammar.  You can find the app in play store with the url http://play.google.com/store/apps/details?id=</string>
+    <string name="ok">OK</string>
+    <string name="see_results">See Results</string>
+    <string name="cancel">Cancel</string>
+    <string name="success_dialog_message">Your Result is : Congrats!!! You are pass!!!</string>
+    <string name="failure_dialog_message">Your Result is : Sorry!!! Try Again!!!</string>
+    <string name="dialog_title">Result</string>
+
+</resources>

@@ -40,6 +40,10 @@ android {
             applicationId = "com.padhuga.tamil.kalaigal"
             versionName = "1.0-kalaigal"
         }
+        vilayaatu {
+            applicationId = "com.padhuga.tamil.vilayaatu"
+            versionName = "1.0-games"
+        }
     }
 }
 

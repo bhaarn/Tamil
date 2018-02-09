@@ -5,5 +5,5 @@
     <dimen name="commonPadding">10dp</dimen>
     <dimen name="cardviewProperty">20dp</dimen>
     <dimen name="parent_layout_common_margin">0dp</dimen>
-
+    <dimen name="activity_margin">4dp</dimen>
 </resources>

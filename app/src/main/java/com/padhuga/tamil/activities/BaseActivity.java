@@ -45,7 +45,6 @@ public class BaseActivity extends AppCompatActivity {
     private SharedPreferences sharedPref;
     private int progRess;
     ParentModel parentModel;
-    String listType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +53,6 @@ public class BaseActivity extends AppCompatActivity {
         appName = getPackageName();
         sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         parentModel = readJSONFromAssetsAndConvertTogson();
-        listType = getResources().getString(R.string.list_view_type);
     }
 
     @Override

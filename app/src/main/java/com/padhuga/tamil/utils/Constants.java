@@ -1,5 +1,7 @@
 package com.padhuga.tamil.utils;
 
+import java.util.ArrayList;
+
 public class Constants {
 
     public static final String ARG_SECTION_POSITION = "position";
@@ -11,7 +13,8 @@ public class Constants {
 
     public static final String ARG_QUERY_TEXT = "query_text";
 
-    public static final String ARG_LIST_TYPE = "list_type";
-    public static final int ARG_EXPANDABLE_LIST_TYPE = 0;
-    public static final int ARG_NORMAL_LIST_TYPE = 1;
+    public static String layoutType;
+    public static int parentCount;
+    public static ArrayList<String> parentHeading;
+    public static ArrayList<Integer> childItems;
 }

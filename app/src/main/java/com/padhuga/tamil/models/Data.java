@@ -9,6 +9,11 @@ public class Data {
     private String example;
     private ArrayList<Data> type;
 
+    private String parentCount;
+    private ArrayList<String> parentHeading;
+    private String parentType;
+    private ArrayList<Integer> items;
+
     public String getTitle() {
         return title;
     }
@@ -29,4 +34,26 @@ public class Data {
         return type;
     }
 
+
+    private ArrayList<Results> result;
+
+    public String getParentCount() {
+        return parentCount;
+    }
+
+    public ArrayList<String> getParentHeading() {
+        return parentHeading;
+    }
+
+    public String getParentType() {
+        return parentType;
+    }
+
+    public ArrayList<Integer> getItems() {
+        return items;
+    }
+
+    public ArrayList<Results> getResult() {
+        return result;
+    }
 }
