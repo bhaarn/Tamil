@@ -1,4 +1,4 @@
-package com.padhuga.tamil.utilities;
+package com.padhuga.tamil.utils;
 
 
 import com.padhuga.tamil.models.Item;

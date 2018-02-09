@@ -13,6 +13,7 @@ public class Data {
     private ArrayList<String> parentHeading;
     private String parentType;
     private ArrayList<Integer> items;
+    private ArrayList<Results> result;
 
     public String getTitle() {
         return title;
@@ -34,8 +35,6 @@ public class Data {
         return type;
     }
 
-
-    private ArrayList<Results> result;
 
     public String getParentCount() {
         return parentCount;

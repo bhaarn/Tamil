@@ -11,8 +11,8 @@ import com.padhuga.tamil.adapters.ItemBaseAdapter;
 import com.padhuga.tamil.models.Item;
 import com.padhuga.tamil.models.PassObject;
 import com.padhuga.tamil.models.Results;
-import com.padhuga.tamil.utilities.AddOrRemove;
-import com.padhuga.tamil.utilities.AlertGenerator;
+import com.padhuga.tamil.utils.AddOrRemove;
+import com.padhuga.tamil.utils.AlertGenerator;
 
 import java.util.ArrayList;
 import java.util.Collections;

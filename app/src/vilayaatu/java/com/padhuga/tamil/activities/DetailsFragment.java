@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import com.padhuga.tamil.R;
 import com.padhuga.tamil.models.Data;
 import com.padhuga.tamil.models.Results;
-import com.padhuga.tamil.utilities.ItemGenerator;
 import com.padhuga.tamil.utils.Constants;
+import com.padhuga.tamil.utils.ItemGenerator;
 
 import java.util.ArrayList;
 
