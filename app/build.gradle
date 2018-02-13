@@ -1,10 +1,75 @@
 apply plugin: 'com.android.application'
 
+static def getAppVersionCode() {
+    def versionCode = System.getenv('VERSION_CODE')
+    if (versionCode != null) {
+        return versionCode
+    }
+    return '0'
+}
+
+static def getAppVersionNumber() {
+    def versionNumber = System.getenv('VERSION_NUMBER')
+    if (versionNumber != null) {
+        return versionNumber
+    }
+    return '1.' + getAppVersionCode()
+}
+
+def getEnvironmentKeystorePath() {
+    def keystoreName = System.getenv('KEYSTORE_NAME')
+    def workspacePath = System.getenv('WORKSPACE')
+    if (keystoreName != null && workspacePath != null) {
+        return file(file(workspacePath).getParent()).getParent() + "/" + keystoreName
+    }
+    return 'Tamil-signingkey.keystore'
+}
+
+static def getEnvironmentKeystoreAlias() {
+    def keystoreAlias = System.getenv('KEYSTORE_ALIAS')
+    if (keystoreAlias != null) {
+        return keystoreAlias
+    }
+    return 'Tamil'
+}
+
+static def getEnvironmentKeystorePassword() {
+    def keystorePassword = System.getenv('KEYSTORE_PASSWORD')
+    if (keystorePassword != null) {
+        return keystorePassword
+    }
+    return 'Padhuga@555'
+}
+
+static def getEnvironmentKeystoreKeyPassword() {
+    def keystoreKeyPassword = System.getenv('KEYSTORE_KEY_PASSWORD')
+    if (keystoreKeyPassword != null) {
+        return keystoreKeyPassword
+    }
+    return 'Padhuga@555'
+}
+
+/*static def getGooglePlayServiceAccountKeyPath() {
+    def keyPath = System.getenv('GOOGLE_PLAY_SERVICE_ACCOUNT_KEY_PATH')
+    if (keyPath != null) {
+        return keyPath
+    }
+    return 'no_file'
+}
+
+
+play {
+    serviceAccountEmail = 'padhugadhasan@gmail.com'
+    pk12File = file(getGooglePlayServiceAccountKeyPath())
+}*/
+
 android {
     compileSdkVersion 27
     buildToolsVersion "26.0.2"
+    setTestBuildType('debug')
     flavorDimensions "default"
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.padhuga.tamil"
         minSdkVersion 19
         targetSdkVersion 27
@@ -12,43 +77,62 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        prod {
+            storeFile file(getEnvironmentKeystorePath())
+            storePassword getEnvironmentKeystorePassword()
+            keyAlias getEnvironmentKeystoreAlias()
+            keyPassword getEnvironmentKeystoreKeyPassword()
+        }
+    }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.prod
+        }
+        debug {
+            debuggable true
+            minifyEnabled true
         }
     }
 
     productFlavors {
         illakanam {
             applicationId = "com.padhuga.tamil.illakanam"
-            versionName = "1.0-illakanam"
+            versionCode getAppVersionCode().toInteger()
+            versionName getAppVersionNumber()
         }
         illakiyam {
             applicationId = "com.padhuga.tamil.illakiyam"
-            versionName = "1.0-illakiyam"
+            versionCode getAppVersionCode().toInteger()
+            versionName getAppVersionNumber()
         }
         isai {
             applicationId = "com.padhuga.tamil.isai"
-            versionName = "1.0-isai"
+            versionCode getAppVersionCode().toInteger()
+            versionName getAppVersionNumber()
         }
         nadagam {
             applicationId = "com.padhuga.tamil.nadagam"
-            versionName = "1.0-nadagam"
+            versionCode getAppVersionCode().toInteger()
+            versionName getAppVersionNumber()
         }
         kalaigal {
             applicationId = "com.padhuga.tamil.kalaigal"
-            versionName = "1.0-kalaigal"
+            versionCode getAppVersionCode().toInteger()
+            versionName getAppVersionNumber()
         }
         vilayaatu {
             applicationId = "com.padhuga.tamil.vilayaatu"
-            versionName = "1.0-games"
+            versionCode getAppVersionCode().toInteger()
+            versionName getAppVersionNumber()
         }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
