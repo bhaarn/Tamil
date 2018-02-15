@@ -24,23 +24,11 @@ public class DetailsActivity extends BaseActivity {
     }
 
     private void Initialize(int position, int childPosition) {
-        initializeAds();
+        initializeAds(this);
 
         SectionDetailAdapter mSectionDetailAdapter = new SectionDetailAdapter(getSupportFragmentManager(), parentModel, position);
         ViewPager mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionDetailAdapter);
         mViewPager.setCurrentItem(childPosition);
-    }
-
-    private void initializeAds() {
-        MobileAds.initialize(this, getResources().getString(R.string.ad_id));
-        AdView mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("66E56BD85B959A0701EA3C5F7D32E19D")
-                .build();
-        mAdView.loadAd(adRequest);
-        Boolean b = adRequest.isTestDevice(this);
-        Log.d("Bharani", b.toString());
     }
 }

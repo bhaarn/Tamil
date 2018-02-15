@@ -8,18 +8,19 @@ static def getAppVersionCode() {
     return '0'
 }
 
-static def getAppVersionNumber() {
+static def getAppVersionNumber(appName) {
     def versionNumber = System.getenv('VERSION_NUMBER')
     if (versionNumber != null) {
         return versionNumber
     }
-    return '1.' + getAppVersionCode()
+    return appName + '1.' + getAppVersionCode()
 }
 
 def getEnvironmentKeystorePath() {
     def keystoreName = System.getenv('KEYSTORE_NAME')
     def workspacePath = System.getenv('WORKSPACE')
     if (keystoreName != null && workspacePath != null) {
+        println(file(file(workspacePath).getParent()).getParent() + "/" + keystoreName)
         return file(file(workspacePath).getParent()).getParent() + "/" + keystoreName
     }
     return 'Tamil-signingkey.keystore'
@@ -101,32 +102,32 @@ android {
         illakanam {
             applicationId = "com.padhuga.tamil.illakanam"
             versionCode getAppVersionCode().toInteger()
-            versionName getAppVersionNumber()
+            versionName getAppVersionNumber('Illakanam ')
         }
         illakiyam {
             applicationId = "com.padhuga.tamil.illakiyam"
             versionCode getAppVersionCode().toInteger()
-            versionName getAppVersionNumber()
+            versionName getAppVersionNumber('Illakiyam ')
         }
         isai {
             applicationId = "com.padhuga.tamil.isai"
             versionCode getAppVersionCode().toInteger()
-            versionName getAppVersionNumber()
+            versionName getAppVersionNumber('Isai ')
         }
         nadagam {
             applicationId = "com.padhuga.tamil.nadagam"
             versionCode getAppVersionCode().toInteger()
-            versionName getAppVersionNumber()
+            versionName getAppVersionNumber('Nadagam ')
         }
         kalaigal {
             applicationId = "com.padhuga.tamil.kalaigal"
             versionCode getAppVersionCode().toInteger()
-            versionName getAppVersionNumber()
+            versionName getAppVersionNumber('Kalaigal ')
         }
         vilayaatu {
             applicationId = "com.padhuga.tamil.vilayaatu"
             versionCode getAppVersionCode().toInteger()
-            versionName getAppVersionNumber()
+            versionName getAppVersionNumber('Vilayaatu ')
         }
     }
 }
