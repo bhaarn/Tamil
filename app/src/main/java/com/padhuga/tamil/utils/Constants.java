@@ -1,7 +1,5 @@
 package com.padhuga.tamil.utils;
 
-import java.util.ArrayList;
-
 public class Constants {
 
     public static final String ARG_SECTION_POSITION = "position";
@@ -12,9 +10,4 @@ public class Constants {
     public static final String PREF_THEME_CHANGE = "change_theme";
 
     public static final String ARG_QUERY_TEXT = "query_text";
-
-    public static String layoutType;
-    public static int parentCount;
-    public static ArrayList<String> parentHeading;
-    public static ArrayList<Integer> childItems;
 }

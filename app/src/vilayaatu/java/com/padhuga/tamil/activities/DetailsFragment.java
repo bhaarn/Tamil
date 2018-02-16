@@ -37,20 +37,16 @@ public class DetailsFragment extends Fragment {
     }
 
     private void setData(ViewGroup rootView) {
-        ArrayList<Results> results;
-        int position = -1;
-        int childPosition = -1;
         if(getArguments() != null) {
-            position = getArguments().getInt(Constants.ARG_SECTION_POSITION);
-            childPosition = getArguments().getInt(Constants.ARG_CHILD_POSITION);
+            int position = getArguments().getInt(Constants.ARG_SECTION_POSITION);
+            int childPosition = getArguments().getInt(Constants.ARG_CHILD_POSITION);
+            Data data = getActivity() != null ? ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(childPosition) : null;
+            int parentCount = Integer.parseInt(data != null ? data.getParentCount() : null);
+            String  layoutType = data != null ? data.getParentType() : null;
+            ArrayList<Integer> childItems = data != null ? data.getItems() : null;
+            ArrayList<String> parentHeading = data != null ? data.getParentHeading() : null;
+            ArrayList<Results> results = data != null ? data.getResult() : null;
+            new ItemGenerator(getActivity()).init(rootView, parentCount, layoutType, parentHeading, childItems, results);
         }
-        Data data = getActivity() != null ? ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(childPosition) : null;
-
-        Constants.parentCount = Integer.parseInt(data != null ? data.getParentCount() : null);
-        Constants.layoutType = data != null ? data.getParentType() : null;
-        Constants.childItems = data != null ? data.getItems() : null;
-        Constants.parentHeading = data != null ? data.getParentHeading() : null;
-        results = data != null ? data.getResult() : null;
-        new ItemGenerator(getActivity()).init(rootView, Constants.parentCount, Constants.layoutType, Constants.parentHeading, Constants.childItems, results);
     }
 }
