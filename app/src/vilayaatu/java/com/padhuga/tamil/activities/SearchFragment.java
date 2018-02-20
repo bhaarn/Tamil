@@ -20,27 +20,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchFragment extends Fragment {
-    private ArrayList<SearchRetriever> searchRetriever = null;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_search, container, false);
         ListView searchResultsListView = rootView.findViewById(R.id.search_results_list);
-        String query = getArguments().getString(Constants.ARG_QUERY_TEXT);
-        final List<String> queryResults = new ArrayList<>();
+        if(getArguments() != null) {
+            String query = getArguments().getString(Constants.ARG_QUERY_TEXT);
+            final List<String> queryResults = new ArrayList<>();
 
-        searchRetriever = ((BaseActivity)getActivity()).showSearchResults(query);
-        for(int titleIndex = 0;titleIndex < searchRetriever.size(); titleIndex++) {
-            queryResults.add(titleIndex, searchRetriever.get(titleIndex).getTitle());
-        }
-        ArrayAdapter<String> searchArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, queryResults);
-        searchResultsListView.setAdapter(searchArrayAdapter);
+            final ArrayList<SearchRetriever> searchRetriever = ((BaseActivity) getActivity()) != null ? ((BaseActivity) getActivity()).showSearchResults(query) : null;
+            if(searchRetriever != null) {
+                for (int titleIndex = 0; titleIndex < searchRetriever.size(); titleIndex++) {
+                    queryResults.add(titleIndex, searchRetriever.get(titleIndex).getTitle());
+                }
+                if (getContext() != null) {
+                    ArrayAdapter<String> searchArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, queryResults);
+                    searchResultsListView.setAdapter(searchArrayAdapter);
+                }
 
-        searchResultsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> arg0, View v, int position, long arg3) {
-                setupUI(searchRetriever.get(position).getPosition(), searchRetriever.get(position).getChildPosition());
+                searchResultsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    public void onItemClick(AdapterView<?> arg0, View v, int position, long arg3) {
+                        setupUI(searchRetriever.get(position).getPosition(), searchRetriever.get(position).getChildPosition());
+                    }
+                });
             }
-        });
+        }
         return rootView;
     }
 
@@ -53,9 +58,11 @@ public class SearchFragment extends Fragment {
 
         detailsFragment.setArguments(args);
         FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(android.R.id.content, detailsFragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        if(fragmentManager != null) {
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(android.R.id.content, detailsFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
     }
 }
