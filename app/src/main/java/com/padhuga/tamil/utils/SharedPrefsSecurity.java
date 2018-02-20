@@ -5,6 +5,9 @@ import android.content.SharedPreferences;
 import android.util.Base64;
 import android.util.Log;
 
+import com.google.gson.Gson;
+import com.padhuga.tamil.models.ParentModel;
+
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.security.InvalidAlgorithmParameterException;
@@ -28,6 +31,7 @@ public class SharedPrefsSecurity {
     private static final String KEY_TRANSFORMATION = "AES/ECB/PKCS5Padding";
     private static final String SECRET_KEY_HASH_TRANSFORMATION = "SHA-256";
     private static final String CHARSET = "UTF-8";
+    private static Gson GSON;
 
     private boolean encryptKeys;
     private Cipher writer;
@@ -40,13 +44,12 @@ public class SharedPrefsSecurity {
             this.writer = Cipher.getInstance(TRANSFORMATION);
             this.reader = Cipher.getInstance(TRANSFORMATION);
             this.keyWriter = Cipher.getInstance(KEY_TRANSFORMATION);
+            GSON = new Gson();
             initCiphers(secureKey);
             this.preferences = context.getSharedPreferences(preferenceName, Context.MODE_PRIVATE);
             this.encryptKeys = encryptKeys;
-        } catch (GeneralSecurityException e) {
+        } catch (GeneralSecurityException | UnsupportedEncodingException e) {
             throw new SecurePreferencesException(e);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
         }
     }
 
@@ -77,11 +80,21 @@ public class SharedPrefsSecurity {
         return md.digest(key.getBytes(CHARSET));
     }
 
-    private void put(String key, String value) {
+    public void put(String key, String value) {
         if (value == null) {
             preferences.edit().remove(toKey(key)).apply();
         } else {
             putValue(toKey(key), value);
+        }
+    }
+
+    public void put(String key, Object value){
+        if (value == null) {
+            preferences.edit().remove(toKey(key)).apply();
+        }
+        else{
+            String jsonData = GSON.toJson(value);
+            putValue(toKey(key), jsonData);
         }
     }
 
@@ -93,12 +106,25 @@ public class SharedPrefsSecurity {
         preferences.edit().remove(toKey(key)).apply();
     }
 
-    private String getString(String key) throws SecurePreferencesException {
+    public String getString(String key) throws SecurePreferencesException {
         if (preferences.contains(toKey(key))) {
             String securedEncodedValue = preferences.getString(toKey(key), "");
             return decrypt(securedEncodedValue);
         }
         return null;
+    }
+
+    public <T> T getObject(String key, Class<T> a) {
+        String gson = getString(key);
+        if (gson == null) {
+            return null;
+        } else {
+            try{
+                return GSON.fromJson(gson, a);
+            } catch (Exception e) {
+                throw new IllegalArgumentException("Object storaged with key " + key + " is instanceof other class");
+            }
+        }
     }
 
     public void clear() {
@@ -137,7 +163,7 @@ public class SharedPrefsSecurity {
         }
     }
 
-    private static byte[] convert(Cipher cipher, byte[] bs) throws SecurePreferencesException {
+    private byte[] convert(Cipher cipher, byte[] bs) throws SecurePreferencesException {
         try {
             return cipher.doFinal(bs);
         } catch (Exception e) {
@@ -146,10 +172,18 @@ public class SharedPrefsSecurity {
     }
 
     public void initSharedPrefsSecurity(Context context) {
-        SharedPrefsSecurity preferences = new SharedPrefsSecurity(context, "my-preferences", "SometopSecretKey1235", true);
-        preferences.put("userId", "User1234");
+        SharedPrefsSecurity preferences = new SharedPrefsSecurity(context, "tamil_user_preference", "Padhugadhasan@555*%&", true);
+        preferences.put("userIdIntToString", String.valueOf(1));
+        preferences.put("userIdString", "userid1234");
         String user = preferences.getString("userId");
         Log.d("Bharani user", user);
+    }
+
+    public void initSharedPrefsSecurityObject(Context context, ParentModel parentModel) {
+        SharedPrefsSecurity preferences = new SharedPrefsSecurity(context, "tamil_user_preference", "Padhugadhasan@555*%&", true);
+        preferences.put("jsonObject", parentModel);
+        ParentModel parentModel1 = preferences.getObject("jsonObject", ParentModel.class);
+//        Log.d("Bharani JsonData", parentModel1.getData().getDesc());
     }
 }
 
