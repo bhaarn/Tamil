@@ -198,14 +198,14 @@ public class BaseActivity extends AppCompatActivity {
 
     public ArrayList<SearchRetriever> showSearchResults(String query) {
         ArrayList<SearchRetriever> searchRetriever = new ArrayList<>();
-        for (int position = 0; position < parentModel.getData().getType().size(); position++) {
-            for (int groupPosition = 0; groupPosition < parentModel.getData().getType().get(position).getType().size(); groupPosition++) {
-                for (int childPosition = 0; childPosition < parentModel.getData().getType().get(position).getType().get(groupPosition).getType().size(); childPosition++) {
-                    if (parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getTitle().contains(query) ||
-                            parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getSoothiram().contains(query) ||
-                            parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getDesc().contains(query) ||
-                            parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getExample().contains(query)) {
-                        searchRetriever.add(new SearchRetriever(parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition).getTitle(),
+        for (int position = 0; position < parentModel.data.type.size(); position++) {
+            for (int groupPosition = 0; groupPosition < parentModel.data.type.get(position).type.size(); groupPosition++) {
+                for (int childPosition = 0; childPosition < parentModel.data.type.get(position).type.get(groupPosition).type.size(); childPosition++) {
+                    if (parentModel.data.type.get(position).type.get(groupPosition).type.get(childPosition).type.contains(query) ||
+                            parentModel.data.type.get(position).type.get(groupPosition).type.get(childPosition).soothiram.contains(query) ||
+                            parentModel.data.type.get(position).type.get(groupPosition).type.get(childPosition).desc.contains(query) ||
+                            parentModel.data.type.get(position).type.get(groupPosition).type.get(childPosition).example.contains(query)) {
+                        searchRetriever.add(new SearchRetriever(parentModel.data.type.get(position).type.get(groupPosition).type.get(childPosition).title,
                                 position, groupPosition, childPosition));
                     }
                 }

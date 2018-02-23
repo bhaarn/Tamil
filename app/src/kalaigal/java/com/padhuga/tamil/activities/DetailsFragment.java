@@ -35,17 +35,17 @@ public class DetailsFragment extends Fragment {
     private void setData(ViewGroup rootView) {
         int position = getArguments().getInt(Constants.ARG_SECTION_POSITION);
         int childPosition = getArguments().getInt(Constants.ARG_CHILD_POSITION);
-        Data data = ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(childPosition);
+        Data data = ((BaseActivity) getActivity()).parentModel.data.type.get(position).type.get(childPosition);
 
         BaseTextView childTitle = rootView.findViewById(R.id.child_title);
         BaseTextView childSoothiram = rootView.findViewById(R.id.child_soothiram);
         BaseTextView childContent = rootView.findViewById(R.id.child_content);
         BaseTextView childExample = rootView.findViewById(R.id.child_example);
 
-        childTitle.setText(data.getTitle());
-        childSoothiram.setText(data.getSoothiram());
-        childContent.setText(data.getDesc());
-        childExample.setText(data.getExample());
+        childTitle.setText(data.title);
+        childSoothiram.setText(data.soothiram);
+        childContent.setText(data.desc);
+        childExample.setText(data.example);
 
         if (!childSoothiram.getText().equals("")) {
             childSoothiram.setVisibility(View.VISIBLE);

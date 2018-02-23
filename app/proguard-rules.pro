@@ -23,3 +23,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#keep all public and protected methods that could be used by java reflection
+#keep all public and protected methods that could be used by java reflection
+-keep public class com.padhuga.tamil.models.** {
+  public *** ***;
+}
+

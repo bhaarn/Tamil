@@ -38,16 +38,16 @@ public class DetailsFragment extends Fragment {
         int position = getArguments().getInt(Constants.ARG_SECTION_POSITION);
         int groupPosition = getArguments().getInt(Constants.ARG_PARENT_POSITION);
         int childPosition = getArguments().getInt(Constants.ARG_CHILD_POSITION);
-        Data data = ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(groupPosition).getType().get(childPosition);
+        Data data = ((BaseActivity) getActivity()).parentModel.data.type.get(position).type.get(groupPosition).type.get(childPosition);
         BaseTextView childTitle = rootView.findViewById(R.id.child_title);
         BaseTextView childSoothiram = rootView.findViewById(R.id.child_soothiram);
         BaseTextView childContent = rootView.findViewById(R.id.child_content);
         BaseTextView childExample = rootView.findViewById(R.id.child_example);
 
-        childTitle.setText(data.getTitle());
-        childSoothiram.setText(data.getSoothiram());
-        childContent.setText(data.getDesc());
-        childExample.setText(data.getExample());
+        childTitle.setText(data.title);
+        childSoothiram.setText(data.soothiram);
+        childContent.setText(data.desc);
+        childExample.setText(data.example);
 
         if (!childSoothiram.getText().equals("")) {
             childSoothiram.setVisibility(View.VISIBLE);
@@ -57,7 +57,7 @@ public class DetailsFragment extends Fragment {
 
     private void setGrandChildData(Data data, ViewGroup rootView) {
         final ViewGroup nullParent = null;
-        for (int grandChildCount = 0; grandChildCount < data.getType().size(); grandChildCount++) {
+        for (int grandChildCount = 0; grandChildCount < data.type.size(); grandChildCount++) {
             LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View view = layoutInflater.inflate(R.layout.content_grandchild, nullParent);
 
@@ -66,10 +66,10 @@ public class DetailsFragment extends Fragment {
             BaseTextView grandChildContent = view.findViewById(R.id.grand_child_content);
             BaseTextView grandChildExample = view.findViewById(R.id.grand_child_example);
 
-            grandChildTitle.setText(data.getType().get(grandChildCount).getTitle());
-            grandChildSoothiram.setText(data.getType().get(grandChildCount).getSoothiram());
-            grandChildContent.setText(data.getType().get(grandChildCount).getDesc());
-            grandChildExample.setText(data.getType().get(grandChildCount).getExample());
+            grandChildTitle.setText(data.type.get(grandChildCount).title);
+            grandChildSoothiram.setText(data.type.get(grandChildCount).soothiram);
+            grandChildContent.setText(data.type.get(grandChildCount).desc);
+            grandChildExample.setText(data.type.get(grandChildCount).example);
 
             ViewGroup viewGroup = rootView.findViewById(R.id.overall_parent);
             viewGroup.addView(view, -1, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));

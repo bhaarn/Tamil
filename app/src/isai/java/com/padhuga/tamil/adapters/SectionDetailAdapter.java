@@ -27,11 +27,11 @@ public class SectionDetailAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-            return parentModel.getData().getType().get(position).getType().get(groupPosition).getType().size();
+            return parentModel.data.type.get(position).type.get(groupPosition).type.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return this.parentModel.getData().getType().get(position).getTitle();
+        return this.parentModel.data.type.get(position).title;
     }
 }

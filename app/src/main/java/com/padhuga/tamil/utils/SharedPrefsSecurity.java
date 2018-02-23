@@ -183,7 +183,7 @@ public class SharedPrefsSecurity {
         SharedPrefsSecurity preferences = new SharedPrefsSecurity(context, "tamil_user_preference", "Padhugadhasan@555*%&", true);
         preferences.put("jsonObject", parentModel);
         ParentModel parentModel1 = preferences.getObject("jsonObject", ParentModel.class);
-//        Log.d("Bharani JsonData", parentModel1.getData().getDesc());
+//        Log.d("Bharani JsonData", parentModel1.data.desc);
     }
 }
 

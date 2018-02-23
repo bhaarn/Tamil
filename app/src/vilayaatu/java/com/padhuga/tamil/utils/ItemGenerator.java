@@ -129,7 +129,7 @@ public class ItemGenerator {
     private void getResultStrings(ArrayList<Results> results) {
         TypedArray arrayText = context.getResources().obtainTypedArray(R.array.text);
         for (int i = 0; i < results.size(); i++) {
-            String s = arrayText.getString(results.get(i).getParent1().get(i) - 1);
+            String s = arrayText.getString(results.get(i).parent1.get(i) - 1);
         }
         arrayText.recycle();
     }

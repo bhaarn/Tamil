@@ -64,15 +64,15 @@ public class ItemMyDragListener implements View.OnDragListener {
                     ArrayList<Integer> d;
                     ArrayList<Integer> e;
                     a = b = c = d = e = droppedItems;
-                    if (results.get(0).getParent1() != null && a.size() == results.get(0).getParent1().size() && a.removeAll(results.get(0).getParent1()) && a.size() == 0) {
+                    if (results.get(0).parent1 != null && a.size() == results.get(0).parent1.size() && a.removeAll(results.get(0).parent1) && a.size() == 0) {
                         Log.d("Bharani", "Success");
-                    } else if (results.get(0).getParent2() != null && b.size() == results.get(0).getParent2().size() && b.removeAll(results.get(0).getParent2()) && b.size() == 0) {
+                    } else if (results.get(0).parent2 != null && b.size() == results.get(0).parent2.size() && b.removeAll(results.get(0).parent2) && b.size() == 0) {
                         Log.d("Bharani", "Success");
-                    } else if (results.get(0).getParent3() != null && c.size() == results.get(0).getParent3().size() && c.removeAll(results.get(0).getParent3()) && c.size() == 0) {
+                    } else if (results.get(0).parent3 != null && c.size() == results.get(0).parent3.size() && c.removeAll(results.get(0).parent3) && c.size() == 0) {
                         Log.d("Bharani", "Success");
-                    } else if (results.get(0).getParent4() != null && d.size() == results.get(0).getParent4().size() && d.removeAll(results.get(0).getParent4()) && d.size() == 0) {
+                    } else if (results.get(0).parent4 != null && d.size() == results.get(0).parent4.size() && d.removeAll(results.get(0).parent4) && d.size() == 0) {
                         Log.d("Bharani", "Success");
-                    } else if (results.get(0).getParent5() != null && e.size() == results.get(0).getParent5().size() && e.removeAll(results.get(0).getParent5()) && e.size() == 0) {
+                    } else if (results.get(0).parent5 != null && e.size() == results.get(0).parent5.size() && e.removeAll(results.get(0).parent5) && e.size() == 0) {
                         Log.d("Bharani", "Success");
                     } else {
                         Log.d("Bharani", "Failure");

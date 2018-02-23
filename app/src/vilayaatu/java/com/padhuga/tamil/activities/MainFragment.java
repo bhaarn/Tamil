@@ -39,8 +39,8 @@ public class MainFragment extends ListFragment {
 
     private void initializeList(View rootView) {
         ArrayList<String> listData = new ArrayList<>();
-        for (int i = 0; i < (getActivity() != null ? ((BaseActivity) getActivity()).parentModel.getData().getType().get(parentPosition).getType().size() : 0); i++) {
-            listData.add(((BaseActivity)getActivity()).parentModel.getData().getType().get(parentPosition).getType().get(i).getTitle());
+        for (int i = 0; i < (getActivity() != null ? ((BaseActivity) getActivity()).parentModel.data.type.get(parentPosition).type.size() : 0); i++) {
+            listData.add(((BaseActivity)getActivity()).parentModel.data.type.get(parentPosition).type.get(i).title);
         }
 
         if(getContext() != null) {

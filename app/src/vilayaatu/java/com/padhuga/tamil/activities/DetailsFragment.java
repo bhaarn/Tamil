@@ -40,12 +40,12 @@ public class DetailsFragment extends Fragment {
         if(getArguments() != null) {
             int position = getArguments().getInt(Constants.ARG_SECTION_POSITION);
             int childPosition = getArguments().getInt(Constants.ARG_CHILD_POSITION);
-            Data data = getActivity() != null ? ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(childPosition) : null;
-            int parentCount = Integer.parseInt(data != null ? data.getParentCount() : null);
-            String  layoutType = data != null ? data.getParentType() : null;
-            ArrayList<Integer> childItems = data != null ? data.getItems() : null;
-            ArrayList<String> parentHeading = data != null ? data.getParentHeading() : null;
-            ArrayList<Results> results = data != null ? data.getResult() : null;
+            Data data = getActivity() != null ? ((BaseActivity) getActivity()).parentModel.data.type.get(position).type.get(childPosition) : null;
+            int parentCount = Integer.parseInt(data != null ? data.parentCount : null);
+            String  layoutType = data != null ? data.parentType : null;
+            ArrayList<Integer> childItems = data != null ? data.items : null;
+            ArrayList<String> parentHeading = data != null ? data.parentHeading : null;
+            ArrayList<Results> results = data != null ? data.result : null;
             new ItemGenerator(getActivity()).init(rootView, parentCount, layoutType, parentHeading, childItems, results);
         }
     }

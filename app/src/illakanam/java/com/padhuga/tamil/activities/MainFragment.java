@@ -45,11 +45,11 @@ public class MainFragment extends Fragment {
         List<String> listDataHeader = new ArrayList<>();
         HashMap<String, List<String>> listDataChild = new HashMap<>();
         ArrayList<String> st;
-        for (int i = 0; i < (((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().size()); i++) {
-            listDataHeader.add(((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(i).getTitle());
+        for (int i = 0; i < (((BaseActivity) getActivity()).parentModel.data.type.get(position).type.size()); i++) {
+            listDataHeader.add(((BaseActivity) getActivity()).parentModel.data.type.get(position).type.get(i).title);
             st = new ArrayList<>();
-            for (int j = 0; j < ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(i).getType().size(); j++) {
-                st.add(j, ((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(i).getType().get(j).getTitle());
+            for (int j = 0; j < ((BaseActivity) getActivity()).parentModel.data.type.get(position).type.get(i).type.size(); j++) {
+                st.add(j, ((BaseActivity) getActivity()).parentModel.data.type.get(position).type.get(i).type.get(j).title);
             }
             listDataChild.put(listDataHeader.get(i), st);
         }

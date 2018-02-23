@@ -93,15 +93,15 @@ public class ItemBaseDragListener implements View.OnDragListener {
                                 int endIdx = startIdx + a.size() - 1;
                             }
                         } else {*/
-                    if (results.get(0).getParent1() != null && a.size() == results.get(0).getParent1().size() && a.removeAll(results.get(0).getParent1()) && a.size() == 0) {
+                    if (results.get(0).parent1 != null && a.size() == results.get(0).parent1.size() && a.removeAll(results.get(0).parent1) && a.size() == 0) {
                         alertGenerator.buildAlert(context, true);
-                    } else if (results.get(0).getParent2() != null && b.size() == results.get(0).getParent2().size() && b.removeAll(results.get(0).getParent2()) && b.size() == 0) {
+                    } else if (results.get(0).parent2 != null && b.size() == results.get(0).parent2.size() && b.removeAll(results.get(0).parent2) && b.size() == 0) {
                         alertGenerator.buildAlert(context, true);
-                    } else if (results.get(0).getParent3() != null && c.size() == results.get(0).getParent3().size() && c.removeAll(results.get(0).getParent3()) && c.size() == 0) {
+                    } else if (results.get(0).parent3 != null && c.size() == results.get(0).parent3.size() && c.removeAll(results.get(0).parent3) && c.size() == 0) {
                         alertGenerator.buildAlert(context, true);
-                    } else if (results.get(0).getParent4() != null && d.size() == results.get(0).getParent4().size() && d.removeAll(results.get(0).getParent4()) && d.size() == 0) {
+                    } else if (results.get(0).parent4 != null && d.size() == results.get(0).parent4.size() && d.removeAll(results.get(0).parent4) && d.size() == 0) {
                         alertGenerator.buildAlert(context, true);
-                    } else if (results.get(0).getParent5() != null && e.size() == results.get(0).getParent5().size() && e.removeAll(results.get(0).getParent5()) && e.size() == 0) {
+                    } else if (results.get(0).parent5 != null && e.size() == results.get(0).parent5.size() && e.removeAll(results.get(0).parent5) && e.size() == 0) {
                         alertGenerator.buildAlert(context, true);
                     } else {
                         alertGenerator.buildAlert(context, false);
@@ -110,14 +110,14 @@ public class ItemBaseDragListener implements View.OnDragListener {
                 //  }
                 //    }
                 else {
-                    if (results.get(0).getParent1() != null && results.get(0).getParent2() == null) {
+                    if (results.get(0).parent1 != null && results.get(0).parent2 == null) {
                         ArrayList<Integer> a;
                         ArrayList<Integer> droppedItems = new ArrayList<>();
                         for (int i = 0; i < destList.size(); i++) {
                             droppedItems.add(destList.get(i).ItemPlaceValue);
                         }
                         a = droppedItems;
-                        int startIdx = Collections.indexOfSubList(results.get(0).getParent1(), a);
+                        int startIdx = Collections.indexOfSubList(results.get(0).parent1, a);
                         if (-1 != startIdx) {
                            // int endIdx = startIdx + a.size() - 1;
                             alertGenerator.buildAlert(context, true);

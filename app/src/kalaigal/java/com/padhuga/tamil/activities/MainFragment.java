@@ -41,8 +41,8 @@ public class MainFragment extends ListFragment {
 
     private void initializeList(View rootView) {
         List<String> listData = new ArrayList<>();
-        for (int i = 0; i < (((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().size()); i++) {
-            listData.add(((BaseActivity) getActivity()).parentModel.getData().getType().get(position).getType().get(i).getTitle());
+        for (int i = 0; i < (((BaseActivity) getActivity()).parentModel.data.type.get(position).type.size()); i++) {
+            listData.add(((BaseActivity) getActivity()).parentModel.data.type.get(position).type.get(i).title);
         }
         ListView listView = rootView.findViewById(android.R.id.list);
         if (getContext() != null) {

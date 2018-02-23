@@ -21,9 +21,9 @@ def getEnvironmentKeystorePath() {
     def workspacePath = System.getenv('WORKSPACE')
     if (keystoreName != null && workspacePath != null) {
         println(file(file(workspacePath).getParent()).getParent() + "/" + keystoreName)
-        return file(file(workspacePath).getParent()).getParent() + "/" + keystoreName
+        return file(file(workspacePath).getParent()) + "/" + keystoreName
     }
-    return 'Tamil-signingkey.keystore'
+    return '../Tamil-signingkey'
 }
 
 static def getEnvironmentKeystoreAlias() {
@@ -85,11 +85,13 @@ android {
             storePassword getEnvironmentKeystorePassword()
             keyAlias getEnvironmentKeystoreAlias()
             keyPassword getEnvironmentKeystoreKeyPassword()
+            v2SigningEnabled false
         }
     }
     buildTypes {
         release {
             minifyEnabled true
+            debuggable true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.prod
