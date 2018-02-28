@@ -149,9 +149,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void aboutUs() {
-        Fragment fragment = new AboutFragment();
-        getSupportFragmentManager().beginTransaction()
-                .replace(android.R.id.content, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();
+        new AboutDialog(this).show();
     }
 
     private void rateApp() {
@@ -235,7 +233,7 @@ public class BaseActivity extends AppCompatActivity {
             }
         });
 
-        fontSizeSelectorDialog.setPositiveButton(R.string.ok,
+        fontSizeSelectorDialog.setPositiveButton(android.R.string.ok,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface fontSizeSelectorDialog, int which) {
                         if (progRess != 0) {
@@ -246,7 +244,7 @@ public class BaseActivity extends AppCompatActivity {
                     }
                 });
 
-        fontSizeSelectorDialog.setNegativeButton(R.string.cancel,
+        fontSizeSelectorDialog.setNegativeButton(android.R.string.cancel,
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface fontSizeSelectorDialog, int i) {

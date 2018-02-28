@@ -20,8 +20,9 @@
     <string name="font_size_max">38</string>
     <string name="tamil_keyboard_check">You will be able to search only if you have Tamil Keyboard.</string>
     <string name="font_size_setter">Set Font Size</string>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
     <string name="search_hint">தமிழ் வார்த்தைகளை தேடு </string>
     <string name="filter_title_view_tamil">tamil</string>
+    <string name="version_label">Version: %1$s</string>
+    <string name="developer_info"><![CDATA[<b>Developed By:</b><br>Padhugadhasan Krishnaswamy<br>]]></string>
+    <string name="pro_version_message">Upgraded to Pro Version!</string>
 </resources>

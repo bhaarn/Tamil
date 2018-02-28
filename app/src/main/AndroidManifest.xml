@@ -3,6 +3,7 @@
     package="com.padhuga.tamil">
 
     <application
+        android:extractNativeLibs="false"
         android:allowBackup="true"
         android:fullBackupContent="@xml/tamil_backup_rules"
         android:icon="@mipmap/tamil_mother"

@@ -15,7 +15,7 @@ public class AlertGenerator {
 
         if (result) {
             builder.setMessage(R.string.success_dialog_message);
-            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
                     dialog.dismiss();
                 }
@@ -27,7 +27,7 @@ public class AlertGenerator {
                     dialog.dismiss();
                 }
             });
-            builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
                 }
             });
