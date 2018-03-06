@@ -29,28 +29,28 @@
         android:title="@string/action_theme_style"
         app:showAsAction="ifRoom|withText" />
     <item
-        android:id="@+id/action_feature_help"
-        android:icon="@android:drawable/ic_menu_help"
-        android:orderInCategory="104"
-        android:title="@string/action_feature_help"
-        app:showAsAction="ifRoom|withText" />
-    <item
         android:id="@+id/action_app_share"
         android:icon="@android:drawable/ic_menu_share"
-        android:orderInCategory="105"
+        android:orderInCategory="104"
         android:title="@string/action_app_share"
         app:showAsAction="ifRoom|withText"
         android:actionProviderClass="android.widget.ShareActionProvider"/>
     <item
         android:id="@+id/action_more_apps"
         android:icon="@android:drawable/ic_menu_more"
-        android:orderInCategory="106"
+        android:orderInCategory="105"
         android:title="@string/action_more_apps"
         app:showAsAction="ifRoom|withText" />
     <item
         android:id="@+id/action_about"
         android:icon="@android:drawable/ic_dialog_info"
-        android:orderInCategory="107"
+        android:orderInCategory="106"
         android:title="@string/action_about"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_feature_help"
+        android:icon="@android:drawable/ic_menu_help"
+        android:orderInCategory="107"
+        android:title="@string/action_feature_help"
         app:showAsAction="ifRoom|withText" />
 </menu>

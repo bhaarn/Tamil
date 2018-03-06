@@ -89,53 +89,6 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:594642547675:android:98a58108cdb8c726",
-        "android_client_info": {
-          "package_name": "com.padhuga.tamil.games"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "594642547675-s7coms48vv6coin5rtilnuf79ilgnt36.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.padhuga.tamil.games",
-            "certificate_hash": "ce2bb0e1ca58552e8e776c974d30a79300db0f9a"
-          }
-        },
-        {
-          "client_id": "594642547675-5623dvv2isubih4mf35k6sp3k6lii9au.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAJAUGy9Ptj6ch-E_XgpBFIBS7T6TAVbLI"
-        },
-        {
-          "current_key": "AIzaSyBjbTOXVid8UoVpzL_CLCboAUTBSiAMIAQ"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "594642547675-5623dvv2isubih4mf35k6sp3k6lii9au.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:594642547675:android:69085b72cd57ad85",
         "android_client_info": {
           "package_name": "com.padhuga.tamil.illakanam"

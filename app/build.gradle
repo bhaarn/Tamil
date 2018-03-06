@@ -53,6 +53,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
     signingConfigs {
         prod {
             storeFile file(getEnvironmentKeystorePath())

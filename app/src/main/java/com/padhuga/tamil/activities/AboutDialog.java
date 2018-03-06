@@ -19,9 +19,9 @@ import com.padhuga.tamil.utils.Constants;
 
 class AboutDialog extends AlertDialog {
 
-    private TextView mAppNameText;
-    private TextView mAboutText;
-    private TextView mVersionText;
+    private TextView appNameText;
+    private TextView aboutText;
+    private TextView versionText;
 
     AboutDialog(Context context) {
         super(context);
@@ -30,9 +30,9 @@ class AboutDialog extends AlertDialog {
         assert inflater != null;
         View layout = inflater.inflate(R.layout.dialog_about, null);
 
-        mAboutText = layout.findViewById(android.R.id.text2);
-        mVersionText = layout.findViewById(android.R.id.text1);
-        mAppNameText = layout.findViewById(android.R.id.title);
+        aboutText = layout.findViewById(android.R.id.text2);
+        versionText = layout.findViewById(android.R.id.text1);
+        appNameText = layout.findViewById(android.R.id.title);
         ImageView mIconView = layout.findViewById(android.R.id.icon);
         setView(layout);
         loadAbout();
@@ -66,12 +66,12 @@ class AboutDialog extends AlertDialog {
 
     private void loadAbout() {
         try {
-            PackageInfo pi = getContext().getPackageManager().getPackageInfo(getContext().getPackageName(), 0);
-            mAppNameText.setText(R.string.app_name);
-            mVersionText.setText(getContext().getResources().getString(R.string.version_label, pi.versionName));
+            PackageInfo packageInfo = getContext().getPackageManager().getPackageInfo(getContext().getPackageName(), 0);
+            appNameText.setText(R.string.app_name);
+            versionText.setText(getContext().getResources().getString(R.string.version_label, packageInfo.versionName));
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        mAboutText.setText(Html.fromHtml(getContext().getResources().getString(R.string.developer_info)));
+        aboutText.setText(Html.fromHtml(getContext().getResources().getString(R.string.developer_info)));
     }
 }
