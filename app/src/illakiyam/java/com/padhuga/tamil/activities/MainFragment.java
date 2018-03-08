@@ -57,6 +57,9 @@ public class MainFragment extends Fragment {
         ExpandableListView expandableListView = rootView.findViewById(R.id.expandableListView);
         ExpandableListAdapter listAdapter = new ExpandableListViewAdapter(getContext(), listDataHeader, listDataChild);
         expandableListView.setAdapter(listAdapter);
+        for(int i=0; i < listAdapter.getGroupCount(); i++) {
+            expandableListView.expandGroup(i);
+        }
         CardView expandableListViewParent = rootView.findViewById(R.id.expandableListViewParent);
         expandableListViewParent.setVisibility(View.VISIBLE);
 
