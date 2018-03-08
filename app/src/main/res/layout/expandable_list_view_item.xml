@@ -8,8 +8,8 @@
         android:id="@+id/listViewItemText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/listViewItemPadding"
-        android:paddingBottom="@dimen/listViewItemPadding"
+        android:paddingTop="@dimen/commonPadding"
+        android:paddingBottom="@dimen/commonPadding"
         android:textColor="@color/colorListViewHeaderText"
         android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingEnd="@dimen/parent_layout_common_margin"/>
