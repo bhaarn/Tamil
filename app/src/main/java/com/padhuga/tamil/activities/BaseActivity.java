@@ -6,21 +6,22 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.view.inputmethod.InputMethodSubtype;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ import com.padhuga.tamil.utils.Constants;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Locale;
+import java.util.List;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -99,30 +100,30 @@ public class BaseActivity extends AppCompatActivity {
         handleIntent(intent);
     }
 
-        private ParentModel readJSONFromAssetsAndConvertTogson() {
-            ParentModel parentModel = null;
-            try {
-                InputStream is = getAssets().open(getResources().getString(R.string.json_file_name));
-                int size = is.available();
-                byte[] buffer = new byte[size];
-                int bytesRead = is.read(buffer);
-                is.close();
-                String json = new String(buffer, getResources().getString(R.string.json_open_file_format));
-                Gson gson = new Gson();
-                parentModel  = gson.fromJson(json, ParentModel.class);
-                Log.d("Json Bytes Read", Integer.toString(bytesRead));
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-            return parentModel;
+    private ParentModel readJSONFromAssetsAndConvertTogson() {
+        ParentModel parentModel = null;
+        try {
+            InputStream is = getAssets().open(getResources().getString(R.string.json_file_name));
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            int bytesRead = is.read(buffer);
+            is.close();
+            String json = new String(buffer, getResources().getString(R.string.json_open_file_format));
+            Gson gson = new Gson();
+            parentModel = gson.fromJson(json, ParentModel.class);
+            Log.d("Json Bytes Read", Integer.toString(bytesRead));
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
+        return parentModel;
+    }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
-            if(resultCode == RESULT_OK) {
+            if (resultCode == RESULT_OK) {
                 Boolean themeChange = data.getBooleanExtra(Constants.PREF_THEME_CHANGE, false);
-                if(themeChange) {
+                if (themeChange) {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -138,7 +139,7 @@ public class BaseActivity extends AppCompatActivity {
         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_SUBJECT, R.string.app_name);
-        sharingIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_message)+appName);
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_message) + appName);
         startActivity(Intent.createChooser(sharingIntent, "Share the application"));
     }
 
@@ -288,17 +289,24 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void openKeyboardPreference() {
-        Toast.makeText(getApplicationContext(), R.string.tamil_keyboard_check, Toast.LENGTH_LONG).show();
-        InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
-        if (imeManager != null) {
-            imeManager.showInputMethodPicker();
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (!inputMethodManager.getCurrentInputMethodSubtype().getLocale().contains("ta_")) {
+            List<InputMethodInfo> inputMethodInfoList = inputMethodManager.getEnabledInputMethodList();
+            for (InputMethodInfo method : inputMethodInfoList) {
+                List<InputMethodSubtype> inputMethodSubtypeList = inputMethodManager.getEnabledInputMethodSubtypeList(method, true);
+                for (InputMethodSubtype inputMethodSubtype : inputMethodSubtypeList) {
+                    if (inputMethodSubtype.getMode().equals("keyboard")) {
+                        String currentLocale = inputMethodSubtype.getLocale();
+                        if (!currentLocale.contains("ta_")) {
+                            Toast.makeText(getApplicationContext(), R.string.tamil_keyboard_check, Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(Settings.ACTION_INPUT_METHOD_SUBTYPE_SETTINGS));
+                        } else {
+                            inputMethodManager.showInputMethodPicker();
+                        }
+                    }
+                }
+            }
         }
-        Resources res = getBaseContext().getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        android.content.res.Configuration conf = res.getConfiguration();
-        conf.locale = new Locale("ta_IN".toLowerCase());
-        res.updateConfiguration(conf, dm);
-        Log.i("inside onStart", "after ever");
     }
 
     void initializeAds(Activity activity) {

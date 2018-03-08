@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.padhuga.tamil.R;
+
 import java.util.HashMap;
 import java.util.List;
-
-import com.padhuga.tamil.R;
 
 public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
@@ -46,9 +46,9 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
         final ViewGroup nullParent = null;
 
         if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this.context
+            LayoutInflater layoutInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.expandable_list_view_item, nullParent);
+            convertView = layoutInflater.inflate(R.layout.expandable_list_view_item, nullParent);
         }
 
         TextView listViewItemText = convertView

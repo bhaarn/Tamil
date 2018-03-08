@@ -18,7 +18,7 @@
     <string name="share_message">Please check this application.  This app is very good in Tamil grammar.  You can find the app in play store with the url http://play.google.com/store/apps/details?id=</string>
     <string name="about_text">about</string>
     <string name="font_size_max">38</string>
-    <string name="tamil_keyboard_check">You will be able to search only if you have Tamil Keyboard.</string>
+    <string name="tamil_keyboard_check">You will be able to search only if you have Tamil Keyboard.  To Enable Tamil KeyBoard, Please Enable Tamil Switch.</string>
     <string name="font_size_setter">Set Font Size</string>
     <string name="search_hint">தமிழ் வார்த்தைகளை தேடு </string>
     <string name="filter_title_view_tamil">tamil</string>
