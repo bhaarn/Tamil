@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/commonPadding" >
+
+        <ImageView
+            android:id="@android:id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/tamil_mother" />
+
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/app_name"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/alert_title_font_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/title"
+            android:layout_centerHorizontal="true"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/alert_primary_text_font_size" />
+
+        <TextView
+            android:id="@android:id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/text1"
+            android:layout_marginTop="@dimen/alert_margin"
+            android:autoLink="web|email"
+            android:gravity="center_horizontal" />
+    </RelativeLayout>
+
+</ScrollView>
