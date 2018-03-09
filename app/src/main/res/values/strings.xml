@@ -3,26 +3,28 @@
     <string name="ad_id">ca-app-pub-2373003321681741~7281773351</string>
     <string name="json_file_name">data.json</string>
     <string name="json_open_file_format">UTF-8</string>
-    <string name="action_app_search">Search</string>
-    <string name="action_app_rate">Rate the App</string>
-    <string name="action_font_size">Change Font Size</string>
-    <string name="action_theme_style">Change Theme Style</string>
-    <string name="action_feature_help">Help</string>
-    <string name="help_text">help</string>
-    <string name="action_app_share">Share the App</string>
-    <string name="action_more_apps">Find More Apps From Developer</string>
-    <string name="action_about">About Us</string>
+    <string name="action_app_search">தேடுக</string>
+    <string name="action_app_rate">அப்ளிகேஷனை மதிப்பிடுக</string>
+    <string name="action_font_size">ஃபான்ட் அளவை மாற்றுக</string>
+    <string name="action_theme_style">தீம் மாற்றுக</string>
+    <string name="action_feature_help">உதவி</string>
+    <string name="action_app_share"> அப்ளிகேஷனை பகிர்க</string>
+    <string name="action_more_apps">எங்களின் பிற அப்ளிகேஷன்கள்</string>
+    <string name="action_about">எங்களை பற்றி</string>
     <string name="play_more_apps">https://play.google.com/store/search?q=padhugadhasan+application</string>
     <string name="old_play_store">market://details?id=</string>
     <string name="new_play_store">http://play.google.com/store/apps/details?id=</string>
-    <string name="share_message">Please check this application.  This app is very good in Tamil grammar.  You can find the app in play store with the url http://play.google.com/store/apps/details?id=</string>
-    <string name="about_text">about</string>
+    <string name="ok">சரி</string>
+    <string name="cancel">ரத்து செய்</string>
+    <string name="share_message">இது தமிழ் இலக்கணத்திற்கான ஒரு நல்ல அப்ளிகேஷன்.  நீங்கள் அதனை டவுன்லோட் செய்ய இந்த URL முகவரியை கிளிக் செய்யவும் : http://play.google.com/store/apps/details?id=</string>
     <string name="font_size_max">38</string>
-    <string name="tamil_keyboard_check">You will be able to search only if you have Tamil Keyboard.  To Enable Tamil KeyBoard, Please Enable Tamil Switch.</string>
-    <string name="font_size_setter">Set Font Size</string>
+    <string name="tamil_keyboard_check">தமிழ் விசைப்பலகை இருந்தால் மட்டுமே தேட முடியும். தமிழ் கீபோர்டை இயக்குவதற்கு, தமிழ் ஸ்விட்சை இயக்குக.</string>
     <string name="search_hint">தமிழ் வார்த்தைகளை தேடு </string>
-    <string name="filter_title_view_tamil">tamil</string>
-    <string name="version_label">Version: %1$s</string>
-    <string name="developer_info"><![CDATA[<b>Developed By:</b><br>Padhugadhasan Krishnaswamy<br>]]></string>
-    <string name="pro_version_message">Upgraded to Pro Version!</string>
+    <string name="filter_title_view_tamil">தமிழ்</string>
+    <string name="version_label">பதிப்பு: %1$s</string>
+    <string name="developer_info"><![CDATA[<b>அப்ளிகேஷன் உருவாக்கம்:</b><br>பாதுகாதாசன் கிருஷ்ணஸ்வாமி<br>]]></string>
+    <string name="pro_version_message">அப்ளிகேஷன் மேம்படுத்தப்பட்டது</string>
+    <string name="text_color">எழுத்தின் நிறம்</string>
+    <string name="first_screen_color">முதல் பக்கத்தின் நிறம்</string>
+    <string name="second_screen_color">இரண்டாம் பக்கத்தின் நிறம்</string>
 </resources>

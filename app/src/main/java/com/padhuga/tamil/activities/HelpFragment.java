@@ -16,7 +16,7 @@ public class HelpFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_help, container, false);
         BaseTextView helpText = rootView.findViewById(R.id.help_text);
-        helpText.setText(R.string.help_text);
+        helpText.setText(R.string.action_feature_help);
         return rootView;
     }
 }

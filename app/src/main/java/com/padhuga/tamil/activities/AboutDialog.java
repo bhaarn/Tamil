@@ -55,7 +55,7 @@ class AboutDialog extends AlertDialog {
                 }
             }
         });
-        setButton(DialogInterface.BUTTON_POSITIVE, getContext().getString(android.R.string.ok), new DialogInterface.OnClickListener() {
+        setButton(DialogInterface.BUTTON_POSITIVE, getContext().getString(R.string.ok), new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {

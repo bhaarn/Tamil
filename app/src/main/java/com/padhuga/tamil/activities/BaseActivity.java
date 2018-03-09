@@ -219,7 +219,7 @@ public class BaseActivity extends AppCompatActivity {
         fontSizeSetter.setMax(Integer.parseInt(getResources().getString(R.string.font_size_max)));  // 14 18 22
         fontSizeSetter.setProgress(sharedPref.getInt(Constants.PREF_COMMON_TEXT_SIZE, 16));
         fontSizeSelectorDialog.setIcon(android.R.drawable.ic_menu_sort_alphabetically);
-        fontSizeSelectorDialog.setTitle(R.string.font_size_setter);
+        fontSizeSelectorDialog.setTitle(R.string.action_font_size);
         fontSizeSelectorDialog.setView(fontSizeSetter);
 
         fontSizeSetter.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -234,7 +234,7 @@ public class BaseActivity extends AppCompatActivity {
             }
         });
 
-        fontSizeSelectorDialog.setPositiveButton(android.R.string.ok,
+        fontSizeSelectorDialog.setPositiveButton(R.string.ok,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface fontSizeSelectorDialog, int which) {
                         if (progRess != 0) {
@@ -245,7 +245,7 @@ public class BaseActivity extends AppCompatActivity {
                     }
                 });
 
-        fontSizeSelectorDialog.setNegativeButton(android.R.string.cancel,
+        fontSizeSelectorDialog.setNegativeButton(R.string.cancel,
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface fontSizeSelectorDialog, int i) {
