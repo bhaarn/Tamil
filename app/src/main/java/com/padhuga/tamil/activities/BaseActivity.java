@@ -289,6 +289,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void openKeyboardPreference() {
+        ArrayList<String> localeItems = new ArrayList<>();
         InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (!inputMethodManager.getCurrentInputMethodSubtype().getLocale().contains("ta_")) {
             List<InputMethodInfo> inputMethodInfoList = inputMethodManager.getEnabledInputMethodList();
@@ -296,15 +297,15 @@ public class BaseActivity extends AppCompatActivity {
                 List<InputMethodSubtype> inputMethodSubtypeList = inputMethodManager.getEnabledInputMethodSubtypeList(method, true);
                 for (InputMethodSubtype inputMethodSubtype : inputMethodSubtypeList) {
                     if (inputMethodSubtype.getMode().equals("keyboard")) {
-                        String currentLocale = inputMethodSubtype.getLocale();
-                        if (!currentLocale.contains("ta_")) {
-                            Toast.makeText(getApplicationContext(), R.string.tamil_keyboard_check, Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(Settings.ACTION_INPUT_METHOD_SUBTYPE_SETTINGS));
-                        } else {
-                            inputMethodManager.showInputMethodPicker();
-                        }
+                        localeItems.add(inputMethodSubtype.getLocale());
                     }
                 }
+            }
+            if (localeItems.contains("ta_") || localeItems.contains("ta_IN") || localeItems.contains("ta_LK") || localeItems.contains("ta_MY") || localeItems.contains("ta_SG")) {
+                inputMethodManager.showInputMethodPicker();
+            } else {
+                Toast.makeText(getApplicationContext(), R.string.tamil_keyboard_check, Toast.LENGTH_LONG).show();
+                startActivity(new Intent(Settings.ACTION_INPUT_METHOD_SUBTYPE_SETTINGS));
             }
         }
     }
