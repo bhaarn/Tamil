@@ -27,8 +27,7 @@ class AboutDialog extends AlertDialog {
         super(context);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        assert inflater != null;
-        View layout = inflater.inflate(R.layout.dialog_about, null);
+        View layout = inflater.inflate(R.layout.dialog_about, null);  // This avoid null passing warning can be suppressed since we don't have the root view for dialogs.
 
         aboutText = layout.findViewById(android.R.id.text2);
         versionText = layout.findViewById(android.R.id.text1);

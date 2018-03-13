@@ -7,6 +7,7 @@ public class Data {
     public String soothiram;
     public String desc;
     public String example;
+    public String html;
     public ArrayList<Data> type;
 
     public String parentCount;

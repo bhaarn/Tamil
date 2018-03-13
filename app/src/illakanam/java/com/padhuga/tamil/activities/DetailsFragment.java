@@ -4,14 +4,18 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 import com.padhuga.tamil.R;
 import com.padhuga.tamil.models.Data;
 import com.padhuga.tamil.utils.BaseTextView;
 import com.padhuga.tamil.utils.Constants;
+
+import java.io.IOException;
 
 public class DetailsFragment extends Fragment {
 
@@ -49,10 +53,28 @@ public class DetailsFragment extends Fragment {
         childContent.setText(data.desc);
         childExample.setText(data.example);
 
+        generateWritingMethod(rootView, data);
+
         if (!childSoothiram.getText().equals("")) {
             childSoothiram.setVisibility(View.VISIBLE);
         }
         setGrandChildData(data, rootView);
+    }
+
+    private void generateWritingMethod(ViewGroup rootView, Data data) {
+        if(!data.html.equals("")) {
+            WebView childWritingForm = rootView.findViewById(R.id.child_writing_form);
+            String html = data.html
+                    .replace("/* %uyir_css_values% */", getCssValues(4))
+                    .replace("/* %mei_css_values% */", getCssValues(6))
+                    .replace("<!-- %uyir_image_placeholder% -->", addEzhuthuImages("uyir_images"))
+                    .replace("<!-- %mei_image_placeholder% -->", addEzhuthuImages("mei_images"));
+            childWritingForm.loadDataWithBaseURL("file:///android_asset/", html,
+                    "text/html", "utf-8", null);
+            String a = childWritingForm.getUrl();
+            Log.d("Bharani URL", a);
+            childWritingForm.setVisibility(View.VISIBLE);
+        }
     }
 
     private void setGrandChildData(Data data, ViewGroup rootView) {
@@ -74,5 +96,21 @@ public class DetailsFragment extends Fragment {
             ViewGroup viewGroup = rootView.findViewById(R.id.overall_parent);
             viewGroup.addView(view, -1, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         }
+    }
+
+    private String addEzhuthuImages(String folderName) {
+        StringBuilder stringBuilder = new StringBuilder();
+        try {
+            for (int i = 0; i < getResources().getAssets().list(folderName).length; i++) {
+                stringBuilder.append("<img src=").append(folderName).append("/").append(getResources().getAssets().list(folderName)[i]).append(">");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBuilder.toString();
+    }
+
+    private String getCssValues(int length_items) {
+        return "html { \n margin: 0px; \n } \n body { \n margin: 0px; \n } \n img { \n width: 30%; \n height: " + 100 / length_items + "%; \n }";
     }
 }

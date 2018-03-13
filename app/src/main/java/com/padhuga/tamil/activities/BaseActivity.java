@@ -315,7 +315,7 @@ public class BaseActivity extends AppCompatActivity {
         AdView mAdView = activity.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("2818610EB6FDBC046DB14EFB8EE05FEE")
+                .addTestDevice("D61A47C78CD8E1F5ECD16B2D1BD211C6")
                 .build();
         mAdView.loadAd(adRequest);
         Boolean b = adRequest.isTestDevice(this);
