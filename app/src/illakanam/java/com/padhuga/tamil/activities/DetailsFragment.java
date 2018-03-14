@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,6 +65,8 @@ public class DetailsFragment extends Fragment {
         if(!data.html.equals("")) {
             WebView childWritingForm = rootView.findViewById(R.id.child_writing_form);
             childWritingForm.setBackgroundColor(Color.TRANSPARENT);
+            childWritingForm.getSettings().setLoadWithOverviewMode(true);
+            childWritingForm.getSettings().setUseWideViewPort(true);
             String html = data.html
                     .replace("/* %uyir_css_values% */", getCssValues(3))
                     .replace("/* %mei_css_values% */", getCssValues(5))
@@ -73,8 +74,6 @@ public class DetailsFragment extends Fragment {
                     .replace("<!-- %mei_image_placeholder% -->", addEzhuthuImages("mei_images"));
             childWritingForm.loadDataWithBaseURL("file:///android_asset/", html,
                     "text/html", "utf-8", null);
-            String a = childWritingForm.getUrl();
-            Log.d("Bharani URL", a);
             childWritingForm.setVisibility(View.VISIBLE);
         }
     }
