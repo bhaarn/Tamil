@@ -2,18 +2,18 @@
 <resources>
 
     <array name="icon">
-        <item>@drawable/a</item>
-        <item>@drawable/aa</item>
-        <item>@drawable/e</item>
-        <item>@drawable/ee</item>
-        <item>@drawable/oo</item>
-        <item>@drawable/ooo</item>
-        <item>@drawable/ae</item>
-        <item>@drawable/a</item>
-        <item>@drawable/i</item>
-        <item>@drawable/ou</item>
-        <item>@drawable/oou</item>
-        <item>@drawable/a_writing</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
+        <item>@mipmap/tamil_mother</item>
     </array>
     <array name="text">
         <item>"அ"</item>

@@ -10,7 +10,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/tamil_mother"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
         android:theme="@style/AppTheme">
 
         <activity android:name="com.padhuga.tamil.activities.BaseActivity" />
