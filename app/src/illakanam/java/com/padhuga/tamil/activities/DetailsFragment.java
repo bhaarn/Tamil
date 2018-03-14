@@ -1,6 +1,7 @@
 package com.padhuga.tamil.activities;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -64,9 +65,10 @@ public class DetailsFragment extends Fragment {
     private void generateWritingMethod(ViewGroup rootView, Data data) {
         if(!data.html.equals("")) {
             WebView childWritingForm = rootView.findViewById(R.id.child_writing_form);
+            childWritingForm.setBackgroundColor(Color.TRANSPARENT);
             String html = data.html
-                    .replace("/* %uyir_css_values% */", getCssValues(4))
-                    .replace("/* %mei_css_values% */", getCssValues(6))
+                    .replace("/* %uyir_css_values% */", getCssValues(3))
+                    .replace("/* %mei_css_values% */", getCssValues(5))
                     .replace("<!-- %uyir_image_placeholder% -->", addEzhuthuImages("uyir_images"))
                     .replace("<!-- %mei_image_placeholder% -->", addEzhuthuImages("mei_images"));
             childWritingForm.loadDataWithBaseURL("file:///android_asset/", html,
@@ -111,6 +113,6 @@ public class DetailsFragment extends Fragment {
     }
 
     private String getCssValues(int length_items) {
-        return "html { \n margin: 0px; \n } \n body { \n margin: 0px; \n } \n img { \n width: 30%; \n height: " + 100 / length_items + "%; \n }";
+        return "html { \n margin: 0px; \n } \n body { \n margin: 0px; \n } \n img { \n width: 25%; \n height: " + 100 / length_items + "%; \n }";
     }
 }

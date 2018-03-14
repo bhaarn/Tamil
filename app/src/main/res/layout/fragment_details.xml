@@ -37,14 +37,14 @@
                         android:id="@+id/child_example"
                         style="@style/TextViewStyle" />
 
+                    <WebView
+                        android:id="@+id/child_writing_form"
+                        style="@style/WebViewStyle"
+                        android:visibility="gone" />
+
                 </LinearLayout>
 
             </com.padhuga.tamil.utils.BaseChildCardView>
-
-            <WebView
-                android:id="@+id/child_writing_form"
-                style="@style/WebViewStyle"
-                android:visibility="gone" />
 
         </LinearLayout>
 
